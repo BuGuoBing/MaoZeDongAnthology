@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于农业合作化问题 — 我的书籍</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.85;
+  transition: background 0.35s ease, color 0.25s ease;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+[data-theme="blue"] {
+  --bg: #f8f9fc;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #ffffff;
+  --text: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-bg: #eff6ff;
+  --accent-text: #2563eb;
+  --code-bg: #f1f5f9;
+  --blockquote-bg: #f0f9ff;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="blue-dark"] {
+  --bg: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-sidebar: #1e293b;
+  --text: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #334155;
+  --border-light: #1e293b;
+  --accent: #60a5fa;
+  --accent-hover: #93bbfd;
+  --accent-bg: #1e3a5f;
+  --accent-text: #93c5fd;
+  --code-bg: #1e293b;
+  --blockquote-bg: #172554;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.4);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="green"] {
+  --bg: #f6f9f4;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #f9fbf8;
+  --text: #1a2e1a;
+  --text-secondary: #4a6a4a;
+  --text-muted: #8aaa8a;
+  --border: #d4e4d4;
+  --border-light: #eaf2ea;
+  --accent: #2d8a4e;
+  --accent-hover: #1f6b3a;
+  --accent-bg: #edf7ef;
+  --accent-text: #2d8a4e;
+  --code-bg: #f0f5ee;
+  --blockquote-bg: #f0f8f0;
+  --shadow: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.06);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="green-dark"] {
+  --bg: #0d1a0d;
+  --bg-secondary: #162416;
+  --bg-sidebar: #162416;
+  --text: #d4e8d4;
+  --text-secondary: #8aaa8a;
+  --text-muted: #5a7a5a;
+  --border: #2a4a2a;
+  --border-light: #1e361e;
+  --accent: #4ade80;
+  --accent-hover: #6ee7a0;
+  --accent-bg: #14352a;
+  --accent-text: #86efac;
+  --code-bg: #162416;
+  --blockquote-bg: #0d2818;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.4);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="orange"] {
+  --bg: #fdf8f3;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #fffcf8;
+  --text: #2d1f0e;
+  --text-secondary: #7a6548;
+  --text-muted: #b8a080;
+  --border: #e8ddd0;
+  --border-light: #f5efe6;
+  --accent: #d97706;
+  --accent-hover: #b45309;
+  --accent-bg: #fef3c7;
+  --accent-text: #b45309;
+  --code-bg: #faf5ee;
+  --blockquote-bg: #fffbeb;
+  --shadow: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.06);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="orange-dark"] {
+  --bg: #1a1308;
+  --bg-secondary: #2a1f10;
+  --bg-sidebar: #2a1f10;
+  --text: #f0e0c8;
+  --text-secondary: #c8a878;
+  --text-muted: #8a7050;
+  --border: #4a3820;
+  --border-light: #3a2a15;
+  --accent: #fbbf24;
+  --accent-hover: #fcd34d;
+  --accent-bg: #3a2a10;
+  --accent-text: #fde68a;
+  --code-bg: #2a1f10;
+  --blockquote-bg: #2a1f08;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.4);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="purple"] {
+  --bg: #f8f5fc;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #faf8fe;
+  --text: #1e1533;
+  --text-secondary: #6b5b8a;
+  --text-muted: #9a8ab8;
+  --border: #ddd4ee;
+  --border-light: #f0ebf8;
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+  --accent-bg: #f3eeff;
+  --accent-text: #7c3aed;
+  --code-bg: #f5f0fa;
+  --blockquote-bg: #f5f0ff;
+  --shadow: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.06);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="purple-dark"] {
+  --bg: #0f0a1a;
+  --bg-secondary: #1a1230;
+  --bg-sidebar: #1a1230;
+  --text: #e0d4f0;
+  --text-secondary: #a88dd4;
+  --text-muted: #6b5b8a;
+  --border: #332860;
+  --border-light: #221840;
+  --accent: #a78bfa;
+  --accent-hover: #c4b5fd;
+  --accent-bg: #2d1f5e;
+  --accent-text: #c4b5fd;
+  --code-bg: #1a1230;
+  --blockquote-bg: #1a0f30;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.4);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="rose"] {
+  --bg: #fdf5f6;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #fff8f9;
+  --text: #2d1518;
+  --text-secondary: #8a5a60;
+  --text-muted: #b88a90;
+  --border: #f0d4d8;
+  --border-light: #f8eaed;
+  --accent: #e11d48;
+  --accent-hover: #be123c;
+  --accent-bg: #fff1f2;
+  --accent-text: #e11d48;
+  --code-bg: #faf0f1;
+  --blockquote-bg: #fff5f6;
+  --shadow: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.06);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="rose-dark"] {
+  --bg: #1a0a0c;
+  --bg-secondary: #2a1418;
+  --bg-sidebar: #2a1418;
+  --text: #f0d4d8;
+  --text-secondary: #c88a92;
+  --text-muted: #8a5a60;
+  --border: #4a2830;
+  --border-light: #3a1e24;
+  --accent: #fb7185;
+  --accent-hover: #fda4af;
+  --accent-bg: #3a1520;
+  --accent-text: #fda4af;
+  --code-bg: #2a1418;
+  --blockquote-bg: #2a0e14;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.4);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="gray"] {
+  --bg: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #f5f5f5;
+  --text: #262626;
+  --text-secondary: #737373;
+  --text-muted: #a3a3a3;
+  --border: #e5e5e5;
+  --border-light: #f5f5f5;
+  --accent: #525252;
+  --accent-hover: #404040;
+  --accent-bg: #f5f5f5;
+  --accent-text: #404040;
+  --code-bg: #f5f5f5;
+  --blockquote-bg: #fafafa;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="gray-dark"] {
+  --bg: #171717;
+  --bg-secondary: #262626;
+  --bg-sidebar: #1e1e1e;
+  --text: #e5e5e5;
+  --text-secondary: #a3a3a3;
+  --text-muted: #737373;
+  --border: #404040;
+  --border-light: #2a2a2a;
+  --accent: #d4d4d4;
+  --accent-hover: #e5e5e5;
+  --accent-bg: #333333;
+  --accent-text: #e5e5e5;
+  --code-bg: #262626;
+  --blockquote-bg: #1e1e1e;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.4);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+:root, [data-theme=""] {
+  --bg: #f8f9fc;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #ffffff;
+  --text: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-bg: #eff6ff;
+  --accent-text: #2563eb;
+  --code-bg: #f1f5f9;
+  --blockquote-bg: #f0f9ff;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+
+/* ============ 侧边栏 ============ */
+.sidebar {
+  width: var(--sidebar-w);
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  overflow-y: auto;
+  z-index: 100;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-track { background: transparent; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+.sidebar-header {
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.site-title {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.theme-panel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.theme-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: all 0.2s;
+  background: var(--bg-secondary);
+  padding: 0;
+  position: relative;
+}
+
+.theme-dot:hover {
+  transform: scale(1.2);
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.theme-dot.active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+  background: var(--accent-bg);
+}
+
+.theme-dot .tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: var(--bg);
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.theme-dot:hover .tooltip {
+  opacity: 1;
+}
+
+.dark-toggle {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dark-toggle:hover {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.sidebar-nav {
+  padding: 8px 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.nav-group { margin-bottom: 4px; }
+
+.nav-group-title {
+  padding: 12px 20px 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.nav-link {
+  display: block;
+  padding: 7px 20px 7px 24px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.88rem;
+  border-left: 3px solid transparent;
+  transition: all 0.15s ease;
+  line-height: 1.5;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--accent-text);
+  background: var(--accent-bg);
+}
+
+.nav-link.active {
+  color: var(--accent-text);
+  border-left-color: var(--accent);
+  background: var(--accent-bg);
+  font-weight: 600;
+}
+
+/* ============ 遮罩 ============ */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 50;
+  backdrop-filter: blur(2px);
+}
+
+/* ============ 主区域 ============ */
+.main {
+  flex: 1;
+  margin-left: var(--sidebar-w);
+  min-width: 0;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--text);
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.menu-btn:hover { background: var(--accent-bg); }
+
+.breadcrumb {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ============ 内容区 ============ */
+.content {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+}
+
+.page-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 36px;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border);
+}
+
+.content h2 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-light);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 36px 0 14px;
+  letter-spacing: -0.01em;
+}
+
+.content h4 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin: 28px 0 10px;
+}
+
+.content p {
+  margin: 14px 0;
+  color: var(--text);
+}
+
+.content ul, .content ol {
+  margin: 14px 0;
+  padding-left: 28px;
+}
+
+.content li {
+  margin: 6px 0;
+  color: var(--text);
+}
+
+.content li::marker {
+  color: var(--accent);
+}
+
+.content a {
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 30%, transparent);
+  text-underline-offset: 3px;
+  transition: all 0.15s;
+}
+
+.content a:hover {
+  text-decoration-color: var(--accent);
+}
+
+/* 引用块 */
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  padding: 16px 24px;
+  margin: 24px 0;
+  background: var(--blockquote-bg);
+  border-radius: 0 12px 12px 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.content blockquote p { margin: 6px 0; }
+
+/* 图片 */
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: var(--shadow-lg);
+}
+
+/* 表格 */
+.content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 24px 0;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.content th, .content td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.content th {
+  background: var(--accent-bg);
+  font-weight: 600;
+  color: var(--accent-text);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.content tr:last-child td { border-bottom: none; }
+
+.content tr:hover td {
+  background: var(--accent-bg);
+}
+
+/* 代码 */
+.content pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 22px;
+  overflow-x: auto;
+  margin: 20px 0;
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  box-shadow: var(--shadow);
+}
+
+.content code {
+  font-family: var(--font-code);
+  background: var(--code-bg);
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  color: var(--accent-text);
+}
+
+.content pre code {
+  background: none;
+  padding: 0;
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.content .highlight {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 22px;
+  overflow-x: auto;
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+}
+
+.content .highlight pre {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.anchor-link {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 8px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-size: 0.8em;
+}
+
+h2:hover .anchor-link,
+h3:hover .anchor-link { opacity: 0.6; }
+
+/* 水平线 */
+.content hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 40px 0;
+}
+
+/* 列表嵌套 */
+.content ul ul, .content ol ol,
+.content ul ol, .content ol ul {
+  margin: 4px 0;
+}
+
+/* 强调 */
+.content strong { font-weight: 700; color: var(--text); }
+.content em { font-style: italic; }
+
+/* ============ 翻页导航 ============ */
+.page-nav {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 24px 40px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.nav-btn {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 22px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow);
+}
+
+.nav-btn:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.nav-btn .nav-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.nav-btn .nav-title {
+  font-size: 0.95rem;
+  color: var(--accent-text);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.nav-btn.disabled { visibility: hidden; }
+.nav-btn.next { text-align: right; }
+
+/* ============ 首页 ============ */
+.hero-section {
+  text-align: center;
+  padding: 48px 0 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-section .subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 32px 0;
+}
+
+.chapter-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow);
+}
+
+.chapter-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.chapter-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  color: var(--accent-text);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chapter-card h3::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background: var(--accent);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.chapter-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-card li {
+  margin: 4px 0;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.chapter-card li:last-child { border-bottom: none; }
+
+.chapter-card a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chapter-card a::before {
+  content: '›';
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: transform 0.15s;
+}
+
+.chapter-card a:hover {
+  color: var(--accent-text);
+}
+
+.chapter-card a:hover::before {
+  transform: translateX(4px);
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 40px 0 20px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 24px;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* ============ 进度条 ============ */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: 200;
+  transition: transform 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ============ 回到顶部 ============ */
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* ============ 响应式 ============ */
+@media (max-width: 900px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .overlay.open { display: block; }
+  .main { margin-left: 0; }
+  .menu-btn { display: block; }
+  .content { padding: 28px 20px 60px; }
+  .page-nav { padding: 16px 20px 60px; grid-template-columns: 1fr; }
+  .progress-bar { left: 0; }
+  .page-title { font-size: 1.7rem; }
+  .chapter-grid { grid-template-columns: 1fr; }
+  .hero-section h1 { font-size: 2rem; }
+  .topbar { padding: 10px 16px; }
+}
+
+@media (max-width: 480px) {
+  .content { padding: 20px 16px 40px; }
+  .page-title { font-size: 1.5rem; }
+  .hero-section h1 { font-size: 1.6rem; }
+}
+
+/* ============ 打印 ============ */
+@media print {
+  .sidebar, .topbar, .page-nav, .back-to-top, .progress-bar, .overlay { display: none !important; }
+  .main { margin-left: 0; }
+  .content { max-width: 100%; padding: 0; }
+  .page-title { border-bottom: 2px solid #000; }
+  .content pre, .content .highlight { border: 1px solid #ddd; }
+}
+
+/* ============ 选中文字 ============ */
+::selection {
+  background: var(--accent-bg);
+  color: var(--accent-text);
+}
+
+/* ============ 滚动条（全局） ============ */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+</style>
+</head>
+<body>
+<div class="progress-bar"></div>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="site-title">我的书籍</a>
+      <div class="theme-panel" id="themePanel"></div>
+    </div>
+    <nav class="sidebar-nav" id="sidebarNav"></nav>
+  </aside>
+
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+      <span class="breadcrumb">我的书籍</span>
+    </header>
+
+    <article class="content">
+      <h1 id="_1">关于农业合作化问题<a class="anchor-link" href="#_1" title="Permanent link">&para;</a></h1>
+<p>(一九五五年七月三十一日)  </p>
+<blockquote>
+<p>这是毛泽东同志在中共中央召集的省委、市委、自治区党委书记会议上的报告。   </p>
+</blockquote>
+<p>一   </p>
+<p>在全国农村中，新的社会主义群众运动的高潮就要到来。我们的某些同志却像一个小脚女人，东摇西摆地在那里走路，老是埋怨旁人说:走快了，走快了。过多的评头品足，不适当的埋怨，无穷的忧虑，数不尽的清规和戒律，以为这是指导农村中社会主义群众运动的正确方针。   </p>
+<p>否，这不是正确的方针，这是错误的方针。   </p>
+<p>目前农村中合作化的社会改革的高潮，有些地方已经到来，全国也即将到来。这是五亿多农村人口的大规模的社会主义的革命运动，带有极其伟大的世界意义。我们应当积极地热情地有计划地去领导这个运动，而不是用各种办法去拉它向后退。运动中免不了要出些偏差，这是可以理解的，也是不难纠正的。干部中和农民中存在的缺点或错误，只要我们积极地去帮助他们，就会克服或纠正。干部和农民是在党的领导之下前进的，运动基本上是健康的。在有些地方，他们在工作中犯了一些错误，例如:一方面排斥贫农入社，不照顾贫农的困难；另一方面又强迫富裕中农入社，侵犯他们的利益。这些都应该向他们去进行教育，加以纠正，而不是简单地去进行斥责。简单的斥责是不能解决问题的。要大胆指导运动，不要前怕龙，后怕虎。干部和农民在自己的斗争经验中将改造他们自己。要让他们做，在做的中间得到教训，增长才干。这样，大批的优秀人物就会产生。前怕龙后怕虎的态度不能造就干部。必须由上面派出大批经过短期训练的干部，到农村中去指导和帮助合作化运动；但是由上面派下去的干部也要在运动中才能学会怎样做工作。光是进了训练班，听到教员讲了几十条，还不一定就会做工作。   </p>
+<p>总之，领导不应当落在群众运动的后头。而现在的情况，正是群众运动走在领导的前头，领导赶不上运动。这种情况必须改变。   </p>
+<p>二   </p>
+<p>现在，全国合作化运动已经在大规模进展中，我们却还需要辩论这样的问题:合作社能不能发展呢?能不能巩固呢?就某些同志来说，看来问题的中心是在他们忧虑现有的几十万个半社会主义的一般地是小型的(每社平均只有二十几户)合作社能不能巩固。如果不能巩固，当然谈不到发展。某些同志看了过去几年合作化发展的历史还是不相信，他们还要看一看一九五五年这一年的发展情况怎么样。他们也许还要在一九五六年看一年，如果更多的合作社巩固了，他们才会真正相信农业合作化是可能的，他们也才会相信我党中央的方针是正确的。所以，这两年的工作很要紧。   </p>
+<p>为了证明农业合作化的可能性和我党中央对于农业合作化的方针的正确性，我们现在就来谈一谈我国农业合作化运动的历史，也许不是无益的。   </p>
+<p>在中华人民共和国成立以前，在二十二年的革命战争中，我党已经有了在土地改革之后，领导农民，组织带有社会主义萌芽的农业生产互助团体的经验。那时，在江西是劳动互助社和耕田队，在陕北是变工队，在华北、华东和东北各地是互助组。那时，半社会主义和社会主义的农业生产合作社的组织，也已经个别地产生。例如，在抗日时期，在陕北的安塞县，就出现了一个社会主义性质的农业生产合作社。不过，这种合作社在当时还没有推广。   </p>
+<p>我党领导农民更广泛地组织农业生产互助组，并且在互助组的基础上开始成批地组织农业生产合作社，是在中华人民共和国成立以后。到现在，又已经有了差不多六年的历史了。   </p>
+<p>一九五一年十二月十五日，我党中央做出第一个先向地方党组织发布并且在各地试行的关于农业生产互助合作决议草案的时候(这个文件到一九五三年三月，才在报纸上以正式决议的形式发表)，已经有了三百多个农业生产合作社。过了两年，到一九五三年十二月十六日我党中央发布关于农业生产合作社决议的时候，农业生产合作社已经发展到一万四千多个，两年时间增加了四十六倍。   </p>
+<p>这个决议指出，要在一九五三年冬季到一九五四年秋收的时候，农业生产合作社由一万四千多个，发展到三万五千八百多个，即只准备增加一倍半，而其结果，这一年却发展到了十万个合作社，成为一万四千多个合作社的七倍多。   </p>
+<p>一九五四年十月我党中央决定，由十万个合作社增加五倍，发展到六十万个合作社，结果完成了六十七万个合作社。到一九五五年六月为止，经过初步整理之后，缩减了两万个社，留下了六十五万个社，较计划数字超过了五万个社。入社农户共有一千六百九十万户，平均每社二十六户。   </p>
+<p>这些合作社，大部分是在北方几个解放较早的省份。在全国大多数解放较晚的省份中，每省都已经建立了一批农业生产合作社，安徽、浙江两省建立的较多些，但是其他各省建立的数目还不很多。   </p>
+<p>这些合作社，一般地是小型的；但是其中也有少数的大型社，每社有的七八十户，有的一百多户，有的达到几百户。   </p>
+<p>这些合作社，一般地是半社会主义的；但是其中也有少数发展成了社会主义的高级社。   </p>
+<p>同农民的农业生产合作化运动的发展同时，我国已经有了少数社会主义的国营农场。到一九五七年，国营农场将达到三千零三十八个，耕地面积将达到一千六百八十七万亩。其中，机械化农场将达到一百四十一个(包括一九五二年原有的和第一个五年计划时期内增加的)，耕地面积将达到七百五十八万亩；非机耕的地方国营农场二千八百九十七个，耕地面积将达到九百二十九万亩。国营农业在第二第三两个五年计划时期内将有大规模的发展。   </p>
+<p>一九五五年春季，我党中央决定，农业生产合作社发展到一百万个。这个数目字同原有的六十五万个社比较，只增加三十五万个，即只增加半倍多一点。我觉得似乎少了一点，可能需要比原有的六十五万个社增加一倍左右，即增加到一百三十万个左右的合作社，使全国二十几万个乡，除了某些边疆地区以外，每乡都有一个至几个小型的半社会主义性质的农业生产合作社，以作榜样。这些合作社，过一两年就有经验了，就成了老社了，别人就会向它们学习了。由现在到一九五六年十月秋收以前，还有十四个月，完成这样一个建社计划，应当是可能的。希望各省区的负责同志回去研究一下，按照实际情况定出一个适当的计划，于两个月内报告中央。那时我们再来讨论一次，最后定案。   </p>
+<p>问题是能不能巩固。有人说，去年的五十万个合作社的计划太大了，冒进了，今年的三十五万个合作社的计划也太大了，也冒进了。他们怀疑建立这样多的合作社不能巩固。   </p>
+<p>究竟能不能巩固呢?   </p>
+<p>当然，社会主义工业化和社会主义改造都不是容易的事情。要将大约一亿一千万农户由个体经营改变为集体经营，并且进而完成农业的技术改革，确有很多的困难；但是我们应当相信，我们党是能够领导群众克服这些困难的。   </p>
+<p>就农业合作化问题来说，我认为我们应当相信:(1)贫农、新中农中间的下中农和老中农中间的下中农，因为他们的经济地位困难(贫农)，或者他们的经济地位虽然比较解放以前有所改善，但是仍然不富裕(下中农)，因此，他们是有一种走社会主义道路的积极性的，他们是积极地响应党的合作化号召的，特别是他们中间的觉悟较高的分子，这种积极性更大。   </p>
+<p>我认为我们应当相信:(2)党是有能力领导全国人民进到社会主义社会的。我们党已经胜利地领导了一个伟大的人民民主革命，建立了以工人阶级为首的人民民主专政，也就一定能够领导全国人民，在大约三个五年计划的时期内，基本上完成社会主义工业化和对于农业、手工业、资本主义工商业的社会主义改造。在农业方面，也同其他方面一样，我们已经有了足以说服人的有力量的证据。请看第一批三百个合作社，第二批一万三千七百个合作社，第三批八万六千个合作社，以上三批共有十万个合作社，都是一九五四年秋季以前建立起来的，都巩固了，为什么一九五四年至一九五五年的第四批合作社(五十五万个)，一九五五年至一九五六年的第五批合作社(暂定控制数字为三十五万个，尚待最后确定)就不能巩固呢?   </p>
+<p>我们应当相信群众，我们应当相信党，这是两条根本的原理。如果怀疑这两条原理，那就什么事情也做不成了。   </p>
+<p>三   </p>
+<p>为了使全国农村逐步地完成合作化，必须认真地整顿已有的合作社。   </p>
+<p>必须强调注重合作社的质量，反对不顾质量、专门追求合作社和农户的数目字的那一种偏向。因此，必须注重整社的工作。   </p>
+<p>整社不是一年整一次，而是一年整两次至三次。有些今年上半年已经整了一次的(有些地方似乎整得很粗糙，还没有下大力去整)，我建议今年秋冬再整第二次，明年春夏再整第三次。现有六十五万个合作社中，有五十五万个是去冬今春建立的新社，其中有一批比较巩固的所谓“一类社”[1]。加上以前的十万个已经巩固了的老社，那末，已经巩固的社是不少的。可以不可以由这些已经巩固的合作社带领其余尚待巩固的合作社逐步地获得巩固呢?应当肯定地说是可以的。   </p>
+<p>我们应当爱惜农民和干部的任何一点微小的社会主义积极性，而不应当去挫折它。我们应当同合作社社员、合作社干部和县、区、乡干部共命运，同呼吸，不要挫折他们的积极性。   </p>
+<p>要下决心解散的合作社，只是那些全体社员或几乎全体社员都坚决不愿意干下去的合作社。如果一个合作社中只有一部分人坚决不愿意干，那就让这一部分人退出去，而留下大部分人继续干。如果有大部分人坚决不愿意干，只有一小部分人愿意干，那就让大部分人退出去，而将小部分人留下继续干。即使这样，也是好的。河北省有一个很小的合作社只有六户，三户老中农坚决不想再干下去，结果让他们走了；三户贫农[2]则表示无论如何要继续干下去，结果让他们留下，社的组织也保存了。其实，这三户贫农所表示的方向，就是全国五亿农民的方向。一切个体经营的农民，终归是要走这三户贫农所坚决地选择了的道路的。   </p>
+<p>浙江由于采取所谓“坚决收缩”的方针(不是浙江省委决定的)，一下子就从五万三千个合作社中解散了一万五千个包括四十万农户的合作社，引起群众和干部的很大不满，这是很不妥当的。这种“坚决收缩”的方针，是在一种惊惶失措的情绪支配下定出来的。这样一件大事不得中央同意就去做，也是不妥当的。并且在一九五五年四月，中央就提出过这样的警告:“不要重犯一九五三年大批解散合作社的那种错误，否则又要作检讨。”可是有些同志不愿意听。   </p>
+<p>在胜利面前，我认为有两种不好:(1)胜利冲昏了头脑，使自己的头脑大大膨胀起来，犯出“左”的错误，这当然不好。(2)胜利吓昏了头脑，来一个“坚决收缩”，犯出右的错误，这也不好。现在的情况是属于后一种，有些同志被几十万个小型合作社吓昏了。   </p>
+<p>四   </p>
+<p>必须认真地做好建社以前的准备工作。   </p>
+<p>必须一开始就注重合作社的质量，反对单纯地追求数量的偏向。   </p>
+<p>不打无准备的仗，不打无把握的仗。这是我党在过去革命战争时期的著名口号。这个口号也可以用到建设社会主义的工作中来。要有把握，就要有准备，而且要有充分的准备。要在一个省、一个专区和一个县里面建设一批新的农业生产合作社，必须事前做好许多的准备工作。这些工作大体是:(1)批判错误思想，总结工作经验。(2)在农民群众中，有系统地和反复地宣传我党关于农业合作化的方针、政策和办法。在向农民作宣传的时候，不但要解释合作化的好处，也要指出合作化过程中会要遇到的困难，使农民有充分的精神准备。(3)按照实际情况，拟定全省的、全专区的、全县的、全区的和全乡的发展农业合作化的全面规划，从其中拟定年度规划。(4)用短期方式训练办社干部。(5)普遍地大量地发展农业生产互助组，并且只要有可能就促使许多互助组互相联合起来，组成互助组的联合组，打好进一步联合起来建立合作社的基础。   </p>
+<p>有了这些条件，就有可能使合作社发展的数量和质量统一的问题基本上得到解决；但是还要在一批合作社建成以后，跟着就去进行整顿工作。   </p>
+<p>看一批合作社建立起来以后能不能巩固，第一就看建社以前的准备工作是不是做得好，第二就看建社以后的整顿工作是不是做得好。   </p>
+<p>建社工作和整社工作都要依靠党和青年团的乡支部。因此，建社工作和整社工作都要同在乡村中的建党建团工作和整党整团工作密切地相结合。   </p>
+<p>不论建社工作和整社工作，都应当以乡村中当地的干部为主要力量，鼓励和责成他们去做；以上面派去的干部为辅助力量，在那里起指导和帮助的作用，而不是去包办代替一切。   </p>
+<p>五   </p>
+<p>农业生产合作社，在生产上，必须比较单干户和互助组增加农作物的产量。决不能老是等于单干户或互助组的产量，如果这样就失败了，何必要合作社呢?更不能减低产量。已经建立起来了的六十五万个农业生产合作社有百分之八十以上的社都增加了农作物的产量，这是极好的情况，证明农业生产合作社社员的生产积极性是高的，合作社胜过互助组，更胜过单干户。   </p>
+<p>为了要增加农作物的产量，就必须:(1)坚持自愿、互利原则；(2)改善经营管理(生产计划、生产管理、劳动组织等)；(3)提高耕作技术(深耕细作、小株密植、增加复种面积、采用良种、推广新式农具、同病虫害作斗争等)；(4)增加生产资料(土地、肥料、水利、牲畜、农具等)。这是巩固合作社和保证增产的几个必不可少的条件。   </p>
+<p>坚持自愿、互利原则，现在必须注意解决以下各项问题:(1)耕畜和大农具是否以迟一两年再入社为适宜，入社作价是否公道和还款时间是否过长；(2)土地报酬和劳动报酬的比例是否适当；(3)合作社所需要的资金如何筹集；(4)某些社员是否可以使用自己的一部分劳动力去从事某些副业生产(因为现在我们建立起来的农业生产合作社，一般地还是半社会主义性质的，所以，上述四个问题必须注意解决得恰当，才不至于违反贫农和中农之间的互利原则，只有在互利的基础之上才能实现自愿)；(5)社员的自留地应有多少；(6)社员成分问题，等等。   </p>
+<p>这里谈一个社员成分问题。我以为在目前一两年内，在一切合作社还在开始推广或者推广不久的地区，即目前的大多数地区，应当是:(1)贫农；(2)新中农中间的下中农；(3)老中农中间的下中农——这几部分人中间的积极分子，让他们首先组织起来。这几部分人中间暂时还不积极的分子则不要勉强地拉进来。等到他们的觉悟程度提高了，他们对于合作社感到兴趣了，然后再分批地把他们吸收进合作社。这几部分人的经济地位是比较接近的。他们的生活或者还是困难的(贫农，他们分得了土地，比较解放前是好多了，但是还因为人力畜力和农具的不足，生活仍然感到困难)，或者还不富裕(下中农)，因此，他们有一种组织合作社的积极性。虽然如此，他们中间的积极性的程度，由于种种原因，仍然是不同的，有些人很积极，有些人暂时还不大积极，有些人还要看一看。因此，我们对于一切暂时还不想加入合作社的人，即使他们是贫农和下中农也吧，要有一段向他们进行教育的时间，要耐心地等待他们的觉悟，不要违反自愿原则，勉强地把他们拉进来。   </p>
+<p>至于新中农中间的上中农和老中农中间的上中农，即一切经济地位较为富裕的中农，除开若干已经有了走社会主义道路的觉悟、真正自愿加入合作社的，可以吸收他们入社以外，其余暂时都不要吸收，更不要勉强地把他们拉进来。这是因为他们现在还没有走社会主义道路的觉悟，只有等到农村中大多数人都加入合作社了，或者合作社的单位面积产量提高到同这些富裕中农的单位面积产量相等甚至更高了，他们感到再单干下去在各方面都对他们不利，而惟有加入合作社才是较为有利的时候，他们才会下决心加入合作社。   </p>
+<p>这样，先将经济地位贫苦或者还不富裕的人们(约占农村人口百分之六十到七十)，按其觉悟程度，分作多批，在几年内，组成合作社，然后再去吸收富裕中农。这样就可以避免命令主义。   </p>
+<p>在最近几年内，在一切还没有基本上合作化的地区，坚决地不要接收地主和富农加入合作社。在已经基本上合作化了的地区，在那些已经巩固的合作社内，则可以有条件地分批分期地接收那些早已放弃剥削、从事劳动，并且遵守政府法令的原来的地主分子和富农分子加入合作社，参加集体的劳动，并且在劳动中继续改造他们。   </p>
+<p>六   </p>
+<p>在发展的问题上，目前不是批评冒进的问题。说现在合作社的发展“超过了实际可能”，“超过了群众的觉悟水平”，这是不对的。中国的情况是:由于人口众多、已耕的土地不足(全国平均每人只有三亩田地，南方各省很多地方每人只有一亩田或只有几分田)，时有灾荒(每年都有大批的农田，受到各种不同程度的水、旱、风、霜、雹、虫的灾害)和经营方法落后，以致广大农民的生活，虽然在土地改革以后，比较以前有所改善，或者大为改善，但是他们中间的许多人仍然有困难，许多人仍然不富裕，富裕的农民只占比较的少数，因此大多数农民有一种走社会主义道路的积极性。我国社会主义工业化的建设和它的成就，正在日益促进他们的这种积极性。对于他们说来，除了社会主义，再无别的出路。这种状况的农民，占全国农村人口的百分之六十到七十。这就是说，全国大多数农民，为了摆脱贫困，改善生活，为了抵御灾荒，只有联合起来，向社会主义大道前进，才能达到目的。这种感觉，已经在广大的贫农和非富裕的农民中间迅速地发展起来。富裕的或比较富裕的农民，只占全国农村人口的百分之二十到三十，他们是动摇的，有些人是在力求走资本主义道路的。前面说过，贫农和非富裕的农民中间也有许多人，因为觉悟不高，暂时还是观望的，他们也有摇摆；但是同富裕农民比较，他们是容易接受社会主义的。这是实际存在的情况。而我们的有些同志却忽略了这种情况，认为现在刚刚发展起来的几十万个小型的半社会主义的农业生产合作社，即已“超过了实际可能”，“超过了群众的觉悟水平”，这是看见了较小量的富裕农民，忘记了最大量的贫农和非富裕农民。这是第一种错误思想。   </p>
+<p>这些同志还对于共产党在农村中的领导力量和广大农民对于共产党的热忱拥护这样一种情况，估计不足。他们认为我们的党对于几十万个小型合作社都难于巩固，大发展更不敢设想。他们悲观地描写党在领导农业合作化工作中的现时状况，认为“超过了干部的经验水平”。不错，社会主义革命是一场新的革命。过去我们只有资产阶级民主革命的经验，没有社会主义革命的经验。但是怎样去取得这种经验呢?是用坐着不动的方法去取得呢，还是用走进社会主义革命的斗争中去、在斗争中学习的方法去取得呢?不实行五年计划，不着手进行社会主义工业化的工作，我们怎么能够取得工业化的经验呢?五年计划中就有农业合作化的部分，我们不去领导农民在每乡每村都办起一个至几个农业生产合作社来，试问“干部的经验水平”从何处得来，又从何处提高呢?显然，所谓现时农业生产合作社的发展状况“超过了干部的经验水平”这样一种思想，是一种错误的思想。这是第二种错误思想。   </p>
+<p>这些同志看问题的方法不对。他们不去看问题的本质方面，主流方面，而是强调那些非本质方面、非主流方面的东西。应当指出:不能忽略非本质方面和非主流方面的问题，必须逐一地将它们解决。但是，不应当将这些看成为本质和主流，以致迷惑了自己的方向。   </p>
+<p>我们必须相信:(1)广大农民是愿意在党的领导下逐步地走上社会主义道路的；(2)党是能够领导农民走上社会主义道路的。这两点是事物的本质和主流。如果缺乏这种信心，我们就不可能在大约三个五年计划时期内基本上建成社会主义。   </p>
+<p>七   </p>
+<p>苏联建成社会主义的伟大历史经验，鼓舞着我国人民，它使得我国人民对于在我国建成社会主义充满了信心。可是，就在这个国际经验问题上，也存在着不同的看法。有些同志不赞成我党中央关于我国农业合作化的步骤应当和我国的社会主义工业化的步骤相适应的方针，而这种方针，曾经在苏联证明是正确的。他们认为在工业化的问题上可以采取现在规定的速度，而在农业合作化的问题上则不必同工业化的步骤相适应，而应当采取特别迟缓的速度。这就忽视了苏联的经验。这些同志不知道社会主义工业化是不能离开农业合作化而孤立地去进行的。首先，大家知道，我国的商品粮食和工业原料的生产水平，现在是很低的，而国家对于这些物资的需要却是一年一年地增大，这是一个尖锐的矛盾。如果我们不能在大约三个五年计划的时期内基本上解决农业合作化的问题，即农业由使用畜力农具的小规模的经营跃进到使用机器的大规模的经营，包括由国家组织的使用机器的大规模的移民垦荒在内(三个五年计划期内，准备垦荒四亿亩至五亿亩)，我们就不能解决年年增长的商品粮食和工业原料的需要同现时主要农作物一般产量很低之间的矛盾，我们的社会主义工业化事业就会遇到绝大的困难，我们就不可能完成社会主义工业化。这个问题，苏联在建设社会主义的过程中是曾经遇到了的，苏联是用有计划地领导和发展农业合作化的方法解决了，我们也只有用这个方法才能解决它。其次，我们的一些同志也没有把这样两件事联系起来想一想，即:社会主义工业化的一个最重要的部门——重工业，它的拖拉机的生产，它的其他农业机器的生产，它的化学肥料的生产，它的供农业使用的现代运输工具的生产，它的供农业使用的煤油和电力的生产等等，所有这些，只有在农业已经形成了合作化的大规模经营的基础上才有使用的可能，或者才能大量地使用。我们现在不但正在进行关于社会制度方面的由私有制到公有制的革命，而且正在进行技术方面的由手工业生产到大规模现代化机器生产的革命，而这两种革命是结合在一起的。在农业方面，在我国的条件下(在资本主义国家内是使农业资本主义化)，则必须先有合作化，然后才能使用大机器。由此可见，我们对于工业和农业、社会主义的工业化和社会主义的农业改造这样两件事，决不可以分割起来和互相孤立起来去看，决不可以只强调一方面，减弱另一方面。苏联的经验，在这个问题上也给我们指出了方向，我们的有些同志却没有注意，他们老是孤立地互不联系地去看这些问题。其次，我们的一些同志也没有把这样两件事联系起来想一想，即:为了完成国家工业化和农业技术改造所需要的大量资金，其中有一个相当大的部分是要从农业方面积累起来的。这除了直接的农业税以外，就是发展为农民所需要的大量生活资料的轻工业的生产，拿这些东西去同农民的商品粮食和轻工业原料相交换，既满足了农民和国家两方面的物资需要，又为国家积累了资金。而轻工业的大规模的发展不但需要重工业的发展，也需要农业的发展。因为大规模的轻工业的发展，不是在小农经济的基础上所能实现的，它有待于大规模的农业，而在我国就是社会主义的合作化的农业。因为只有这种农业，才能够使农民有比较现在不知大到多少倍的购买力。这种经验，苏联也已经提供给我们了，我们的有些同志却没有注意。他们老是站在资产阶级、富农或者具有资本主义自发倾向的富裕中农的立场上替较少的人打主意，而没有站在工人阶级的立场上替整个国家和全体人民打主意。   </p>
+<p>八   </p>
+<p>有些同志，又在苏联共产党的历史上找到了根据，拿来批评我国目前的农业合作化工作中的所谓急躁冒进。《苏联共产党(布)历史简明教程》不是告诉了我们，他们的许多地方党组织，曾经在合作化的速度问题上，在一个时期内，犯过急躁冒进的错误吗?我们难道不应当注意这一项国际经验吗?   </p>
+<p>我认为我们应当注意苏联的这一项经验，我们必须反对任何没有准备的不顾农民群众觉悟水平的急躁冒进的思想；但是我们不应当容许我们的一些同志利用苏联的这项经验来为他们的爬行思想作掩护。   </p>
+<p>我党中央是怎样决定在中国进行农业合作化的呢?   </p>
+<p>第一、它是准备以十八年的时间基本上完成这个计划的。   </p>
+<p>从一九四九年十月中华人民共和国成立的时候起，到一九五二年，这三年多一点的时间，是为完成恢复我国经济的任务度过了的。在这个时间内，在农业方面，我们除了实行土地改革和恢复农业生产这些任务之外，我们还在一切老解放区大大地推广了农业生产互助组的组织，并且着手组织半社会主义的农业生产合作社，取得了一些经验。接着是从一九五三年起的第一个五年计划，到现在已经实行了差不多三年，我们的农业合作化运动已经向全国范围内推广，我们的经验也增加了。从中华人民共和国成立直到第三个五年计划的完成，共有时间十八年。我们准备在这个时间内，同基本上完成社会主义工业化、基本上完成手工业和资本主义工商业的社会主义改造同时，基本上完成农业方面的社会主义的改造。这是可能的吗?苏联的经验告诉我们，这是完全可能的。苏联是在一九二○年结束国内战争的，从一九二一年到一九三七年，共有十七年时间完成了农业的合作化，而它的合作化的主要工作是在一九二九年到一九三四年这六年时间内完成的。在这个时间内，虽然苏联的一些地方党组织，如像《苏联共产党(布)历史简明教程》上所说的，犯过一次所谓“胜利冲昏头脑”的错误，但是很快就被纠正。苏联终于用很大的努力胜利地完成了整个农业的社会主义改造，并且在农业方面完成了强大的技术改造。苏联所走过的这一条道路，正是我们的榜样。   </p>
+<p>第二、我们在农业社会主义改造方面采取了逐步前进的办法。第一步，在农村中，按照自愿和互利的原则，号召农民组织仅仅带有某些社会主义萌芽的、几户为一起或者十几户为一起的农业生产互助组。然后，第二步，在这些互助组的基础上，仍然按照自愿和互利的原则，号召农民组织以土地入股和统一经营为特点的小型的带有半社会主义性质的农业生产合作社。然后，第三步，才在这些小型的半社会主义的合作社的基础上，按照同样的自愿和互利的原则，号召农民进一步地联合起来，组织大型的完全社会主义性质的农业生产合作社。这些步骤，可以使农民从自己的经验中逐步地提高社会主义的觉悟程度，逐步地改变他们的生活方式，因而可以使他们较少地感到他们的生活方式的改变好像是突然地到来的。这些步骤，可以基本上避免在一个时间内(例如在一年到两年内)农作物的减产，相反，它必须保证每年增产，而这是可以做到的。现在已有的六十五万个农业生产合作社，百分之八十以上的社是增产的，百分之十几的社是不增不减的，百分之几的社是减产的。这后面的两类情况是不好的，特别是减产的一类最不好，必须用大力去整顿。因为有百分之八十以上的合作社是增产的(增产的数量由百分之十到百分之三十)；又因为那百分之十几的合作社虽然第一年不增不减，但是经过整顿，第二年可能增产；最后，那百分之几减产的合作社，经过整顿，第二年也有可能增产，或者进到不增不减的地位。所以，就整个说来，我们的合作化的发展是健康的，是可以基本上保证增产而避免减产的。这些步骤，又是训练干部的很好的学校。经过这些步骤，大量的合作社管理人员和技术人员就可以逐步地训练出来。   </p>
+<p>第三、每年按照实际情况规定一次发展农业合作化的控制数字，并且要对合作化的工作进行几次检查。这样，就可以根据情况的变化、成绩的好坏，决定各省各县各乡的每年具体发展的步骤。有些地方是可以暂停一下，从事整顿的；有些地方是可以边发展，边整顿的。有些合作社的部分社员可以让他们退社，个别的合作社也可以让它们暂时解散。有些地方应当大量地建立新社，有些地方可以只在老社中扩大农户的数目。各省各县，在发展了一批合作社之后，必须有一个停止发展进行整顿的时间，然后再去发展一批合作社。那种不许有停顿、不许有间歇的思想是错误的。至于对于合作化运动的检查工作，中央、各省委、区党委、市委和地委必须十分抓紧，每年不是进行一次，而是应当进行几次。一有问题就去解决，不要使问题成了堆才去作一次总解决。批评要是及时的批评，不要老是爱好事后的批评。例如今年七个月内，单是中央召集地方负责同志讨论农村合作化问题的会议，连同这次会议在内，就有了三次。实行这种因地制宜、及时指导的方法，就可以保证我们的工作少犯一些错误，犯了错误也可以迅速纠正。   </p>
+<p>从上述种种情况看来，难道不可以说我党中央对于农业合作化问题的指导方针是正确的，因而足以保证运动的健康发展吗?我想可以这样说，并且应当这样说的，将这种方针估价为“冒进”的说法是完全错误的。   </p>
+<p>九   </p>
+<p>有些同志，从资产阶级、富农或者具有资本主义自发倾向的富裕中农的立场出发，错误地观察了工农联盟这样一个极端重要的问题。他们认为目前合作化运动的情况很危险，他们劝我们从目前合作化的道路上“赶快下马”。他们向我们提出了警告:“如果不赶快下马，就有破坏工农联盟的危险。”我们认为恰好相反，如果不赶快上马，就有破坏工农联盟的危险。这里看来只有一字之差，一个要下马，一个要上马，却是表现了两条路线的分歧。大家知道，我们已经有了一个工农联盟，这是建立在反对帝国主义和封建主义、从地主手里取得土地分给农民、使农民从封建所有制解放出来这样一个资产阶级民主革命的基础之上的。但是这个革命已经过去了，封建所有制已经消灭了。现在农村中存在的是富农的资本主义所有制和像汪洋大海一样的个体农民的所有制。大家已经看见，在最近几年中间，农村中的资本主义自发势力一天一天地在发展，新富农已经到处出现，许多富裕中农力求把自己变为富农。许多贫农，则因为生产资料不足，仍然处于贫困地位，有些人欠了债，有些人出卖土地，或者出租土地。这种情况如果让它发展下去，农村中向两极分化的现象必然一天一天地严重起来。失去土地的农民和继续处于贫困地位的农民将要埋怨我们，他们将说我们见死不救，不去帮助他们解决困难。向资本主义方向发展的那些富裕中农也将对我们不满，因为我们如果不想走资本主义的道路的话，就永远不能满足这些农民的要求。在这种情况之下，工人和农民的同盟能够继续巩固下去吗?显然是不能够的。这个问题，只有在新的基础之上才能获得解决。这就是在逐步地实现社会主义工业化和逐步地实现对于手工业、对于资本主义工商业的社会主义改造的同时，逐步地实现对于整个农业的社会主义的改造，即实行合作化，在农村中消灭富农经济制度和个体经济制度，使全体农村人民共同富裕起来。我们认为只有这样，工人和农民的联盟才能获得巩固。如果我们不这样做，这个联盟就有被破坏的危险。劝我们“下马”的那些同志，在这个问题上是完全想错了。   </p>
+<p>十   </p>
+<p>必须现在就要看到，农村中不久就将出现一个全国性的社会主义改造的高潮，这是不可避免的。到第一个五年计划最后一年的末尾和第二个五年计划第一年的开头，即在一九五八年春季，全国将有二亿五千万左右的人口一一五千五百万左右的农户(以平均四口半人为一户计算)加入半社会主义性质的合作社，这就是全体农村人口的一半。那时，将有很多县份和若干省份的农业经济，基本上完成半社会主义的改造，并且将在全国各地都有一小部分的合作社，由半社会主义变为全社会主义。我们将在第二个五年计划的前半期，即在一九六○年，对于包括其余一半农村人口的农业经济，基本上完成半社会主义的改造。那时，由半社会主义的合作社改变为全社会主义的合作社的数目，将会加多。在第一第二两个五年计划时期内，农村中的改革将还是以社会改革为主，技术改革为辅，大型的农业机器必定有所增加，但还是不很多。在第三个五年计划时期内，农村的改革将是社会改革和技术改革同时并进，大型农业机器的使用将逐年增多，而社会改革则将在一九六○年以后，逐步地分批分期地由半社会主义发展到全社会主义。中国只有在社会经济制度方面彻底地完成社会主义改造，又在技术方面，在一切能够使用机器操作的部门和地方，统统使用机器操作，才能使社会经济面貌全部改观。由于我国的经济条件，技术改革的时间，比较社会改革的时间，会要长一些。估计在全国范围内基本上完成农业方面的技术改革，大概需要四个至五个五年计划，即二十年至二十五年的时间。全党必须为了这个伟大任务的实现而奋斗。   </p>
+<p>十一   </p>
+<p>要有全面的规划，还要加强领导。   </p>
+<p>要有全国的、全省的、全专区的、全县的、全区的、全乡的关于合作化分期实行的规划。并且要根据实际工作的发展情况，不断地修正自己的规划。省、专、县、区、乡各级的党和青年团的组织，都要严重地注意农村问题，切实地改善自己对于农村工作的领导。各级地方党委和团委的主要负责同志都要抓紧研究农业合作化的工作，都要把自己变成内行。总而言之，要主动，不要被动；要加强领导，不要放弃领导。   </p>
+<p>十二   </p>
+<p>一九五四年八月(这已经不是新闻了)，中国共产党黑龙江省委的报告说:“随着农村合作化高涨形势的形成和发展，农村各类互助合作组织和各阶层群众，已经程度不同地普遍地动起来了。现有的农业生产合作社正在筹划和酝酿扩大社员，作为建社对象的农业生产互助组正在筹划和酝酿扩充自己的户数，不够条件的农业生产互助组也要求进一步地发展和提高它们自己。群众有的张罗入新社，有的张罗入老社。今年不准备入社的人们，也在积极地酝酿插入互助组。动的面很广，已经形成了一个群众性的运动。这是农业合作化大发展的一个新的突出的特点。但由于某些县、区有的领导同志，未能适应这个新的特点，及时地加强领导，因此，部分村屯(按:黑龙江省的村是行政单位，等于关内各省的乡。黑龙江省的屯，不是行政单位，等于关内各省的村。)在群众自找对象中，已经开始产生‘强找强，排挤贫困农民' ， ‘争骨干，争社员，相互闹不团结'，‘骨干盲目集中'，‘富农和资本主义思想较严重的富裕农民趁机组织低级组或富农社'等等不健康的现象。这些，都充分说明了在农业合作化大发展的情况下，光是从建立新社这个范围和角度出发，考虑贯彻执行党的政策，领导这个运动，已经不够了，必须从全村范围(按:即全乡范围)和全面推进农业合作化运动的角度出发，既考虑到老社的扩大，也考虑到新社的建立，既考虑到合作社的发展，也考虑到互助组的提高，既考虑到今年，也考虑到明年，以至后年。只有这样，才能全面地实现党的政策，使农业合作化运动健康地向前发展。”   </p>
+<p>这里所说的“某些县、区有的领导同志，未能适应这个新的特点，及时地加强领导”，只是黑龙江一个省是这样的吗?只是某些县、区吗?我看，这种领导落在运动后面的严重情况，很可能在全国许多领导机关中都找得出它的代表人物来。   </p>
+<p>黑龙江省委的报告又说:“双城县的希勤村，以村为单位，采取领导和群众自愿相结合的方法，进行了全面规划。这是领导合作化大发展的一种创举。其重要作用，首先在于通过规划，全面地实行了党在农村的阶级路线，加强了贫农和中农的团结，有力地开展了对于富农倾向的斗争。从农业全面合作化的利益着眼，适当地配备了骨干力量，调整和密切了社和社、社和组的关系，从而有计划地全面地推进了农业合作化运动。其次，通过这样的规划，就把农业合作化大发展的工作，具体地布置到基层领导和广大群众中去，使党的村支部懂得了如何进行领导，使老社懂得了如何向前发展，使新社懂得了如何建社，使互助组懂得了提高的具体方向，更加发挥了党的村支部和广大群众的主动性和积极性，充分地体现了依靠党支部、依靠群众的经验和智慧的正确原则。最后，正由于通过这种规划，可以进一步地摸清农村的底，具体地全面地去贯彻执行党的政策。因此，既可以防止急躁冒进，又可以防止保守自流，从而正确地实现了中央的‘积极领导，稳步前进'的方针。”   </p>
+<p>黑龙江省委报告中所说的某些“不健康的现象”，究竟怎样解决的呢?省委的报告没有直接回答这个问题。但是在省委报告的后面附载了双城县委的一个报告，这个报告回答了这个问题。这个报告说:“通过党支部领导和群众自愿相结合进行全面规划的结果，排挤贫困户入社的偏向纠正了，骨干过分集中的问题解决了，互相争骨干、争社员的现象没有了，社组关系更加密切，富农和富裕中农组织富农社或低级组的企图失败了，基本上实现了党支部的计划。两个老社扩大了社员百分之四十，搭起了六个新社的架子，整顿起两个互助组。估计搞得好，明年(按:即一九五五年)全村就可以合作化。目前，全村群众，正在积极地实现今年农业合作化的发展计划和搞好增产保收。村干部普遍认为:‘得亏这样一搞，要不就乱了，不但今年搞不好，还要影响明年。'”   </p>
+<p>我看就照这样办吧。   </p>
+<p>全面规划，加强领导，这就是我们的方针。   </p>
+<hr />
+<p>注释   </p>
+<p>[1]当时一般把办得比较好的、中等的和不好的农业生产合作社，分别称作一类社、二类社和三类社。   </p>
+<p>[2]这里指河北省安平县南王庄的三户贫农王玉坤、王小其、王小庞。   </p>
+<p>（《毛泽东选集》第五卷，人民出版社1977年4月第1版，第168-191页）   </p>
+    </article>
+
+    <footer class="page-nav">
+      <a href="201-《关于胡风反革命集团的材料》的序言和按语.html" class="nav-btn prev">
+          <span class="nav-label">← 上一章</span>
+          <span class="nav-title">《关于胡风反革命集团的材料》的序言和按语</span>
+        </a>
+      <a href="203-农业合作化必须依靠党团员和贫农下中农.html" class="nav-btn next">
+          <span class="nav-label">下一章 →</span>
+          <span class="nav-title">农业合作化必须依靠党团员和贫农下中农</span>
+        </a>
+    </footer>
+  </main>
+</div>
+
+<script>
+const NAV_DATA = [{"title": "章节目录", "sections": [{"url": "000-中国社会各阶级的分析.html", "title": "中国社会各阶级的分析"}, {"url": "001-湖南农民运动考察报告.html", "title": "湖南农民运动考察报告"}, {"url": "002-中国的红色政权为什么能够存在？.html", "title": "中国的红色政权为什么能够存在？"}, {"url": "003-井冈山的斗争.html", "title": "井冈山的斗争"}, {"url": "004-关于纠正党内的错误思想.html", "title": "关于纠正党内的错误思想"}, {"url": "005-星星之火，可以燎原.html", "title": "星星之火，可以燎原"}, {"url": "006-反对本本主义.html", "title": "反对本本主义"}, {"url": "007-必须注意经济工作.html", "title": "必须注意经济工作"}, {"url": "008-怎样分析农村阶级.html", "title": "怎样分析农村阶级"}, {"url": "009-我们的经济政策.html", "title": "我们的经济政策"}, {"url": "010-关心群众生活，注意工作方法.html", "title": "关心群众生活，注意工作方法"}, {"url": "011-论反对日本帝国主义的策略.html", "title": "论反对日本帝国主义的策略"}, {"url": "012-中国革命战争的战略问题.html", "title": "中国革命战争的战略问题"}, {"url": "013-关于蒋介石声明的声明.html", "title": "关于蒋介石声明的声明"}, {"url": "014-中国共产党在抗日时期的任务.html", "title": "中国共产党在抗日时期的任务"}, {"url": "015-为争取千百万群众进入抗日民族统一战线而斗争.html", "title": "为争取千百万群众进入抗日民族统一战线而斗争"}, {"url": "016-实践论.html", "title": "实践论"}, {"url": "017-矛盾论.html", "title": "矛盾论"}, {"url": "018-反对日本进攻的方针、办法和前途.html", "title": "反对日本进攻的方针、办法和前途"}, {"url": "019-为动员一切力量争取抗战胜利而斗争.html", "title": "为动员一切力量争取抗战胜利而斗争"}, {"url": "020-反对自由主义.html", "title": "反对自由主义"}, {"url": "021-国共合作成立后的迫切任务.html", "title": "国共合作成立后的迫切任务"}, {"url": "022-和英国记者贝特兰的谈话.html", "title": "和英国记者贝特兰的谈话"}, {"url": "023-上海太原失陷以后抗日战争的形势和任务.html", "title": "上海太原失陷以后抗日战争的形势和任务"}, {"url": "024-陕甘宁边区政府第八路军后方留守处布告.html", "title": "陕甘宁边区政府第八路军后方留守处布告"}, {"url": "025-抗日游击战争的战略问题.html", "title": "抗日游击战争的战略问题"}, {"url": "026-论持久战.html", "title": "论持久战"}, {"url": "027-中国共产党在民族战争中的地位.html", "title": "中国共产党在民族战争中的地位"}, {"url": "028-统一战线中的独立自主问题.html", "title": "统一战线中的独立自主问题"}, {"url": "029-战争和战略问题.html", "title": "战争和战略问题"}, {"url": "030-五四运动.html", "title": "五四运动"}, {"url": "031-青年运动的方向.html", "title": "青年运动的方向"}, {"url": "032-反对投降活动.html", "title": "反对投降活动"}, {"url": "033-必须制裁反动派.html", "title": "必须制裁反动派"}, {"url": "034-关于国际新形势对新华日报记者的谈话.html", "title": "关于国际新形势对新华日报⑴记者的谈话"}, {"url": "035-和中央社、扫荡报、新民报三记者的谈话.html", "title": "和中央社、扫荡报、新民报⑴三记者的谈话"}, {"url": "036-苏联利益和人类利益的一致.html", "title": "苏联利益和人类利益的一致"}, {"url": "037-《共产党人》发刊词.html", "title": "《共产党人》发刊词"}, {"url": "038-目前形势和党的任务.html", "title": "目前形势和党的任务"}, {"url": "039-大量吸收知识分子.html", "title": "大量吸收知识分子"}, {"url": "040-中国革命和中国共产党.html", "title": "中国革命和中国共产党"}, {"url": "041-斯大林是中国人民的朋友.html", "title": "斯大林是中国人民的朋友"}, {"url": "042-纪念白求恩.html", "title": "纪念白求恩"}, {"url": "043-新民主主义论.html", "title": "新民主主义论"}, {"url": "044-克服投降危险，力争时局好转.html", "title": "克服投降危险，力争时局好转"}, {"url": "045-团结一切抗日力量，反对反共顽固派.html", "title": "团结一切抗日力量，反对反共顽固派"}, {"url": "046-向国民党的十点要求.html", "title": "向国民党的十点要求"}, {"url": "047-《中国工人》发刊词.html", "title": "《中国工人》发刊词"}, {"url": "048-必须强调团结和进步.html", "title": "必须强调团结和进步"}, {"url": "049-新民主主义的宪政.html", "title": "新民主主义的宪政"}, {"url": "050-抗日根据地的政权问题.html", "title": "抗日根据地的政权问题"}, {"url": "051-目前抗日统一战线中的策略问题.html", "title": "目前抗日统一战线中的策略问题"}, {"url": "052-放手发展抗日力量，抵抗反共顽固派的进攻.html", "title": "放手发展抗日力量，抵抗反共顽固派的进攻"}, {"url": "053-团结到底.html", "title": "团结到底"}, {"url": "054-论政策.html", "title": "论政策"}, {"url": "055-为皖南事变发表的命令和谈话.html", "title": "为皖南事变发表的命令和谈话"}, {"url": "056-打退第二次反共高潮后的时局.html", "title": "打退第二次反共高潮后的时局"}, {"url": "057-关于打退第二次反共高潮的总结.html", "title": "关于打退第二次反共高潮的总结"}, {"url": "058-《农村调查》的序言和跋.html", "title": "《农村调查》的序言和跋"}, {"url": "059-改造我们的学习.html", "title": "改造我们的学习"}, {"url": "060-揭破远东慕尼黑的阴谋.html", "title": "揭破远东慕尼黑的阴谋"}, {"url": "061-关于反法西斯的国际统一战线.html", "title": "关于反法西斯的国际统一战线"}, {"url": "062-在陕甘宁边区参议会的演说.html", "title": "在陕甘宁边区参议会的演说"}, {"url": "063-整顿党的作风.html", "title": "整顿党的作风"}, {"url": "064-反对党八股.html", "title": "反对党八股"}, {"url": "065-在延安文艺座谈会上的讲话.html", "title": "在延安文艺座谈会上的讲话"}, {"url": "066-一个极其重要的政策.html", "title": "一个极其重要的政策"}, {"url": "067-第二次世界大战的转折点.html", "title": "第二次世界大战的转折点"}, {"url": "068-祝十月革命二十五周年.html", "title": "祝十月革命二十五周年"}, {"url": "069-抗日时期的经济问题和财政问题.html", "title": "抗日时期的经济问题和财政问题"}, {"url": "070-关于领导方法的若干问题.html", "title": "关于领导方法的若干问题"}, {"url": "071-质问国民党.html", "title": "质问国民党"}, {"url": "072-开展根据地的减租、生产和拥政爱民运动.html", "title": "开展根据地的减租、生产和拥政爱民运动"}, {"url": "073-评国民党十一中全会和三届二次国民参政会.html", "title": "评国民党十一中全会和三届二次国民参政会"}, {"url": "074-组织起来.html", "title": "组织起来"}, {"url": "075-学习和时局.html", "title": "学习和时局"}, {"url": "076-为人民服务.html", "title": "为人民服务"}, {"url": "077-评蒋介石在双十节的演说.html", "title": "评蒋介石在双十节的演说"}, {"url": "078-文化工作中的统一战线.html", "title": "文化工作中的统一战线"}, {"url": "079-必须学会做经济工作.html", "title": "必须学会做经济工作"}, {"url": "080-游击区也能够进行生产.html", "title": "游击区也能够进行生产"}, {"url": "081-两个中国之命运.html", "title": "两个中国之命运"}, {"url": "082-论联合政府.html", "title": "论联合政府"}, {"url": "083-愚公移山.html", "title": "愚公移山"}, {"url": "084-论军队生产自给，兼论整风和生产两大运动的重要性.html", "title": "论军队生产自给，兼论整风和生产两大运动的重要性"}, {"url": "085-赫尔利和蒋介石的双簧已经破产.html", "title": "赫尔利和蒋介石的双簧已经破产"}, {"url": "086-评赫尔利政策的危险.html", "title": "评赫尔利政策的危险"}, {"url": "087-给福斯特同志的电报.html", "title": "给福斯特同志的电报"}, {"url": "088-对日寇的最后一战.html", "title": "对日寇的最后一战"}, {"url": "089-抗日战争胜利后的时局和我们的方针.html", "title": "抗日战争胜利后的时局和我们的方针"}, {"url": "090-蒋介石在挑动内战.html", "title": "蒋介石在挑动内战"}, {"url": "091-第十八集团军总司令给蒋介石的两个电报.html", "title": "第十八集团军总司令给蒋介石的两个电报"}, {"url": "092-评蒋介石发言人谈话.html", "title": "评蒋介石发言人谈话"}, {"url": "093-中共中央关于同国民党进行和平谈判的通知.html", "title": "中共中央关于同国民党进行和平谈判的通知"}, {"url": "094-关于重庆谈判.html", "title": "关于重庆谈判"}, {"url": "095-国民党进攻的真相.html", "title": "国民党进攻的真相"}, {"url": "096-减租和生产是保卫解放区的两件大事.html", "title": "减租和生产是保卫解放区的两件大事"}, {"url": "097-一九四六年解放区工作的方针.html", "title": "一九四六年解放区工作的方针"}, {"url": "098-建立巩固的东北根据地.html", "title": "建立巩固的东北根据地"}, {"url": "099-关于目前国际形势的几点估计.html", "title": "关于目前国际形势的几点估计"}, {"url": "100-以自卫战争粉碎蒋介石的进攻.html", "title": "以自卫战争粉碎蒋介石的进攻"}, {"url": "101-和美国记者安娜·路易斯·斯特朗的谈话.html", "title": "和美国记者安娜·路易斯·斯特朗⑴的谈话"}, {"url": "102-集中优势兵力，各个歼灭敌人.html", "title": "集中优势兵力，各个歼灭敌人"}, {"url": "103-美国“调解”真相和中国内战前途.html", "title": "美国“调解”真相和中国内战前途"}, {"url": "104-三个月总结.html", "title": "三个月总结"}, {"url": "105-迎接中国革命的新高潮.html", "title": "迎接中国革命的新高潮"}, {"url": "106-中共中央关于暂时放弃延安和保卫陕甘宁边区的两个文件.html", "title": "中共中央关于暂时放弃延安和保卫陕甘宁边区的两个文件"}, {"url": "107-关于西北战场的作战方针.html", "title": "关于西北战场的作战方针"}, {"url": "108-蒋介石政府已处在全民的包围中.html", "title": "蒋介石政府已处在全民的包围中"}, {"url": "109-解放战争第二年的战略方针.html", "title": "解放战争第二年的战略方针"}, {"url": "110-中国人民解放军宣言.html", "title": "中国人民解放军宣言"}, {"url": "111-中国人民解放军总部关于重行颁布三大纪律八项注意的训令.html", "title": "中国人民解放军总部关于重行颁布三大纪律八项注意的训令"}, {"url": "112-目前形势和我们的任务.html", "title": "目前形势和我们的任务"}, {"url": "113-关于建立报告制度.html", "title": "关于建立报告制度"}, {"url": "114-关于目前党的政策中的几个重要问题.html", "title": "关于目前党的政策中的几个重要问题"}, {"url": "115-军队内部的民主运动.html", "title": "军队内部的民主运动"}, {"url": "116-在不同地区实施土地法的不同策略.html", "title": "在不同地区实施土地法的不同策略"}, {"url": "117-纠正土地改革宣传中的“左”倾错误.html", "title": "纠正土地改革宣传中的“左”倾错误"}, {"url": "118-新解放区土地改革要点.html", "title": "新解放区土地改革要点"}, {"url": "119-关于工商业政策.html", "title": "关于工商业政策"}, {"url": "120-关于民族资产阶级和开明绅士问题.html", "title": "关于民族资产阶级和开明绅士问题"}, {"url": "121-评西北大捷兼论解放军的新式整军运动.html", "title": "评西北大捷兼论解放军的新式整军运动"}, {"url": "122-关于情况的通报.html", "title": "关于情况的通报"}, {"url": "123-在晋绥干部会议上的讲话.html", "title": "在晋绥干部会议上的讲话"}, {"url": "124-对晋绥日报编辑人员的谈话.html", "title": "对晋绥日报编辑人员的谈话"}, {"url": "125-再克洛阳后给洛阳前线指挥部的电报.html", "title": "再克洛阳后给洛阳前线指挥部的电报"}, {"url": "126-新解放区农村工作的策略问题.html", "title": "新解放区农村工作的策略问题"}, {"url": "127-一九四八年的土地改革工作和整党工作.html", "title": "一九四八年的土地改革工作和整党工作"}, {"url": "128-关于辽沈战役的作战方针.html", "title": "关于辽沈战役⑴的作战方针"}, {"url": "129-关于健全党委制.html", "title": "关于健全党委制"}, {"url": "130-中共中央关于九月会议的通知.html", "title": "中共中央关于九月会议的通知"}, {"url": "131-关于淮海战役的的作战方针.html", "title": "关于淮海战役的的作战方针"}, {"url": "132-全世界革命力量团结起来，反对帝国主义的侵略.html", "title": "全世界革命力量团结起来，反对帝国主义的侵略"}, {"url": "133-中国军事形势的重大变化.html", "title": "中国军事形势的重大变化"}, {"url": "134-关于平津战役的作战方针.html", "title": "关于平津战役⑴的作战方针"}, {"url": "135-敦促杜聿明等投降书.html", "title": "敦促杜聿明等投降书"}, {"url": "136-将革命进行到底.html", "title": "将革命进行到底"}, {"url": "137-评战犯求和.html", "title": "评战犯求和"}, {"url": "138-中共中央毛泽东主席关于时局的声明.html", "title": "中共中央毛泽东主席关于时局的声明"}, {"url": "139-中共发言人评南京行政院的决议.html", "title": "中共发言人评南京行政院的决议"}, {"url": "140-中共发言人关于命令国民党反动政府重新逮捕前日本侵华军总司令冈村宁次和逮捕国民党内战罪犯的谈话.html", "title": "中共发言人关于命令国民党反动政府重新逮捕前日本侵华军总司令冈村宁次和逮捕国民党内战罪犯的谈话"}, {"url": "141-中共发言人关于和平条件必须包括惩办日本战犯和国民党战犯的声明.html", "title": "中共发言人关于和平条件必须包括惩办日本战犯和国民党战犯的声明"}, {"url": "142-把军队变为工作队.html", "title": "把军队变为工作队"}, {"url": "143-四分五裂的反动派为什么还要空喊“全面和平”？.html", "title": "四分五裂的反动派为什么还要空喊“全面和平”？"}, {"url": "144-国民党反动派由“呼吁和平”变为呼吁战争.html", "title": "国民党反动派由“呼吁和平”变为呼吁战争"}, {"url": "145-评国民党对战争责任问题的几种答案.html", "title": "评国民党对战争责任问题的几种答案"}, {"url": "146-在中国共产党第七届中央委员会第二次全体会议上的报告.html", "title": "在中国共产党第七届中央委员会第二次全体会议上的报告"}, {"url": "147-党委会的工作方法.html", "title": "党委会的工作方法"}, {"url": "148-南京政府向何处去？.html", "title": "南京政府向何处去？"}, {"url": "149-向全国进军的命令.html", "title": "向全国进军的命令"}, {"url": "150-中国人民解放军布告.html", "title": "中国人民解放军布告"}, {"url": "151-中国人民解放军总部发言人为英国军舰暴行发表的声明.html", "title": "中国人民解放军总部发言人为英国军舰暴行⑴发表的声明"}, {"url": "152-在新政治协商会议筹备会上的讲话.html", "title": "在新政治协商会议筹备会上的讲话"}, {"url": "153-论人民民主专政--纪念中国共产党二十八周年.html", "title": "论人民民主专政--纪念中国共产党二十八周年"}, {"url": "154-丢掉幻想，准备斗争.html", "title": "丢掉幻想，准备斗争"}, {"url": "155-别了，司徒雷登.html", "title": "别了，司徒雷登"}, {"url": "156-“友谊”，还是侵略？.html", "title": "“友谊”，还是侵略？"}, {"url": "157-为什么要讨论白皮书？.html", "title": "为什么要讨论白皮书？"}, {"url": "158-唯心历史观的破产.html", "title": "唯心历史观的破产"}, {"url": "159-中国人民站起来了.html", "title": "中国人民站起来了"}, {"url": "160-中国人民大团结万岁.html", "title": "中国人民大团结万岁"}, {"url": "161-人民英雄们永垂不朽.html", "title": "人民英雄们永垂不朽"}, {"url": "162-永远保持艰苦奋斗的作风.html", "title": "永远保持艰苦奋斗的作风"}, {"url": "163-征询对待富农策略问题的意见.html", "title": "征询对待富农策略问题的意见"}, {"url": "164-为争取国家财政经济状况的基本好转而斗争.html", "title": "为争取国家财政经济状况的基本好转而斗争"}, {"url": "165-不要四面出击.html", "title": "不要四面出击"}, {"url": "166-做一个完全的革命派.html", "title": "做一个完全的革命派"}, {"url": "167-你们是全民族的模范人物.html", "title": "你们是全民族的模范人物"}, {"url": "168-给中国人民志愿军的命令.html", "title": "给中国人民志愿军的命令"}, {"url": "169-中国人民志愿军要爱护朝鲜的一山一水一草一木.html", "title": "中国人民志愿军要爱护朝鲜的一山一水一草一木"}, {"url": "170-中共中央政治局扩大会议决议要点.html", "title": "中共中央政治局扩大会议决议要点"}, {"url": "171-镇压反革命必须实行党的群众路线.html", "title": "镇压反革命必须实行党的群众路线"}, {"url": "172-镇压反革命必须打得稳，打得准，打得狠.html", "title": "镇压反革命必须打得稳，打得准，打得狠"}, {"url": "173-应当重视电影《武训传》的讨论.html", "title": "应当重视电影《武训传》的讨论"}, {"url": "174-三大运动的伟大胜利.html", "title": "三大运动的伟大胜利"}, {"url": "175-关于“三反”、“五反”的斗争.html", "title": "关于“三反”、“五反”的斗争"}, {"url": "176-把农业互助合作当作一件大事去做.html", "title": "把农业互助合作当作一件大事去做"}, {"url": "177-元旦祝词.html", "title": "元旦祝词"}, {"url": "178-中共中央关于西藏工作方针的指示.html", "title": "中共中央关于西藏工作方针的指示"}, {"url": "179-工人阶级与资产阶级的矛盾是国内的主要矛盾.html", "title": "工人阶级与资产阶级的矛盾是国内的主要矛盾"}, {"url": "180-团结起来，划清敌我界限.html", "title": "团结起来，划清敌我界限"}, {"url": "181-祝贺中国人民志愿军的重大胜利.html", "title": "祝贺中国人民志愿军的重大胜利"}, {"url": "182-反对官僚主义、命令主义和违法乱纪.html", "title": "反对官僚主义、命令主义和违法乱纪"}, {"url": "183-批判大汉族主义.html", "title": "批判大汉族主义"}, {"url": "184-解决“五多”问题.html", "title": "解决“五多”问题"}, {"url": "185-对刘少奇、杨尚昆破坏纪律擅自以中央名义发出文件的批评.html", "title": "对刘少奇、杨尚昆破坏纪律擅自以中央名义发出文件的批评"}, {"url": "186-批判离开总路线的右倾观点.html", "title": "批判离开总路线的右倾观点"}, {"url": "187-青年团的工作要照顾青年的特点.html", "title": "青年团的工作要照顾青年的特点"}, {"url": "188-关于国家资本主义.html", "title": "关于国家资本主义"}, {"url": "189-党在过渡时期的总路线.html", "title": "党在过渡时期的总路线"}, {"url": "190-反对党内的资产阶级思想.html", "title": "反对党内的资产阶级思想"}, {"url": "191-改造资本主义工商业的必经之路.html", "title": "改造资本主义工商业的必经之路"}, {"url": "192-抗美援朝的伟大胜利和今后的任务.html", "title": "抗美援朝的伟大胜利和今后的任务"}, {"url": "193-批判梁漱溟的反动思想.html", "title": "批判梁漱溟的反动思想"}, {"url": "194-关于农业互助合作的两次谈话.html", "title": "关于农业互助合作的两次谈话"}, {"url": "195-关于中华人民共和国宪法草案.html", "title": "关于中华人民共和国宪法草案"}, {"url": "196-为建设一个伟大的社会主义国家而奋斗.html", "title": "为建设一个伟大的社会主义国家而奋斗"}, {"url": "197-关于《红楼梦》研究问题的信.html", "title": "关于《红楼梦》研究问题的信"}, {"url": "198-原子弹吓不倒中国人民.html", "title": "原子弹吓不倒中国人民"}, {"url": "199-在中国共产党全国代表会议上的讲话.html", "title": "在中国共产党全国代表会议上的讲话"}, {"url": "200-驳“舆论一律”.html", "title": "驳“舆论一律”"}, {"url": "201-《关于胡风反革命集团的材料》的序言和按语.html", "title": "《关于胡风反革命集团的材料》的序言和按语"}, {"url": "202-关于农业合作化问题.html", "title": "关于农业合作化问题"}, {"url": "203-农业合作化必须依靠党团员和贫农下中农.html", "title": "农业合作化必须依靠党团员和贫农下中农"}, {"url": "204-农业合作化的一场辩论和当前的阶级斗争.html", "title": "农业合作化的一场辩论和当前的阶级斗争"}, {"url": "205-《中国农村的社会主义高潮》的序言.html", "title": "《中国农村的社会主义高潮》的序言"}, {"url": "206-《中国农村的社会主义高潮》的按语.html", "title": "《中国农村的社会主义高潮》的按语"}, {"url": "207-征询对农业十七条的意见.html", "title": "征询对农业十七条的意见"}, {"url": "208-加快手工业的社会主义改造.html", "title": "加快手工业的社会主义改造"}, {"url": "209-论十大关系.html", "title": "论十大关系"}, {"url": "210-美帝国主义是纸老虎.html", "title": "美帝国主义是纸老虎"}, {"url": "211-增强党的团结，继承党的传统.html", "title": "增强党的团结，继承党的传统"}, {"url": "212-我们党的—些历史经验.html", "title": "我们党的—些历史经验"}, {"url": "213-纪念孙中山先生.html", "title": "纪念孙中山先生"}, {"url": "214-在中国共产党第八届中央委员会第二次全体会议上的讲话.html", "title": "在中国共产党第八届中央委员会第二次全体会议上的讲话"}, {"url": "215-在省市自治区党委书记会议上的讲话.html", "title": "在省市自治区党委书记会议上的讲话"}, {"url": "216-关于正确处理人民内部矛盾的问题.html", "title": "关于正确处理人民内部矛盾的问题"}, {"url": "217-在中国共产党全国宣传工作会议上的讲话.html", "title": "在中国共产党全国宣传工作会议上的讲话"}, {"url": "218-坚持艰苦奋斗，密切联系群众.html", "title": "坚持艰苦奋斗，密切联系群众"}, {"url": "219-事情正在起变化.html", "title": "事情正在起变化"}, {"url": "220-中国共产党是全中国人民的领导核心.html", "title": "中国共产党是全中国人民的领导核心"}, {"url": "221-组织力量反击右派分子的猖狂进攻.html", "title": "组织力量反击右派分子的猖狂进攻"}, {"url": "222-文汇报的资产阶级方向应当批判.html", "title": "文汇报的资产阶级方向应当批判"}, {"url": "223-打退资产阶级右派的进攻.html", "title": "打退资产阶级右派的进攻"}, {"url": "224-一九五七年夏季的形势.html", "title": "一九五七年夏季的形势"}, {"url": "225-做革命的促进派.html", "title": "做革命的促进派"}, {"url": "226-坚定地相信群众的大多数.html", "title": "坚定地相信群众的大多数"}, {"url": "227-党内团结的辩证方法.html", "title": "党内团结的辩证方法"}, {"url": "228-一切反动派都是纸老虎.html", "title": "一切反动派都是纸老虎"}, {"url": "SUMMARY.html", "title": "SUMMARY"}, {"url": "目录.html", "title": "第一卷 国内革命战争时期"}]}];
+
+const THEME_DATA = {"blue": {"name": "天空蓝", "icon": "🔵"}, "green": {"name": "护眼绿", "icon": "🟢"}, "orange": {"name": "暖橙", "icon": "🟠"}, "purple": {"name": "深紫", "icon": "🟣"}, "rose": {"name": "玫瑰红", "icon": "🔴"}, "gray": {"name": "经典灰", "icon": "⚫"}};
+const THEME_KEYS = ["blue", "green", "orange", "purple", "rose", "gray"];
+
+// ---- 安全存储（兼容 file://、隐私模式等限制 localStorage 的环境） ----
+const safeStorage = (function() {
+  const mem = {};
+  let useLocal = false;
+  try {
+    localStorage.setItem('__test__', '1');
+    localStorage.removeItem('__test__');
+    useLocal = true;
+  } catch(e) {}
+  return {
+    get(k) {
+      try { return useLocal ? localStorage.getItem(k) : (mem[k] || null); }
+      catch(e) { return mem[k] || null; }
+    },
+    set(k, v) {
+      try { if (useLocal) localStorage.setItem(k, v); else mem[k] = v; }
+      catch(e) { mem[k] = v; }
+    }
+  };
+})();
+
+// ---- 主题管理 ----
+let _currentTheme = 'blue';
+let _currentDark = false;
+
+function getStoredTheme() {
+  const t = safeStorage.get('book-theme') || 'blue';
+  const d = safeStorage.get('book-dark') === 'true';
+  return { theme: t, dark: d };
+}
+
+function applyTheme(themeKey, dark) {
+  _currentTheme = themeKey;
+  _currentDark = dark;
+  const attr = dark ? themeKey + '-dark' : themeKey;
+  document.documentElement.setAttribute('data-theme', attr);
+  safeStorage.set('book-theme', themeKey);
+  safeStorage.set('book-dark', dark ? 'true' : 'false');
+  updateThemeUI(themeKey, dark);
+}
+
+function updateThemeUI(themeKey, dark) {
+  document.querySelectorAll('.theme-dot').forEach(dot => {
+    dot.classList.toggle('active', dot.dataset.theme === themeKey);
+  });
+  const dtBtn = document.querySelector('.dark-toggle');
+  if (dtBtn) dtBtn.textContent = dark ? '☀️ 亮色' : '🌙 暗色';
+}
+
+function cycleTheme(themeKey) {
+  applyTheme(themeKey, _currentDark);
+}
+
+function toggleDark() {
+  applyTheme(_currentTheme, !_currentDark);
+}
+
+// 初始化主题（立即执行）
+(function() {
+  try {
+    const { theme, dark } = getStoredTheme();
+    applyTheme(theme, dark);
+  } catch(e) {
+    applyTheme('blue', false);
+  }
+})();
+
+// ---- 渲染侧边栏 ----
+function renderNav() {
+  const nav = document.getElementById('sidebarNav');
+  if (!nav) return;
+  const current = decodeURIComponent(window.location.pathname.split('/').pop()) || 'index.html';
+  let html = '';
+  NAV_DATA.forEach(group => {
+    html += '<div class="nav-group">';
+    if (NAV_DATA.length > 1) {
+      html += '<div class="nav-group-title">' + group.title + '</div>';
+    }
+    group.sections.forEach(s => {
+      const sUrl = decodeURIComponent(s.url);
+      const active = sUrl === current ? ' active' : '';
+      html += '<a href="' + s.url + '" class="nav-link' + active + '">' + s.title + '</a>';
+    });
+    html += '</div>';
+  });
+  nav.innerHTML = html;
+}
+
+function renderThemePanel() {
+  const panel = document.getElementById('themePanel');
+  if (!panel) return;
+  panel.innerHTML = '';
+
+  // 创建主题按钮（用 addEventListener 绑定事件，避免 inline onclick 被 CSP 阻止）
+  THEME_KEYS.forEach(function(key) {
+    const t = THEME_DATA[key];
+    const btn = document.createElement('button');
+    btn.className = 'theme-dot' + (key === _currentTheme ? ' active' : '');
+    btn.setAttribute('data-theme', key);
+    btn.setAttribute('title', t.name);
+    btn.textContent = t.icon;
+
+    const tooltip = document.createElement('span');
+    tooltip.className = 'tooltip';
+    tooltip.textContent = t.name;
+    btn.insertBefore(tooltip, btn.firstChild);
+
+    btn.addEventListener('click', function() { cycleTheme(key); });
+    panel.appendChild(btn);
+  });
+
+  // 创建亮/暗切换按钮
+  const darkBtn = document.createElement('button');
+  darkBtn.className = 'dark-toggle';
+  darkBtn.textContent = _currentDark ? '☀️ 亮色' : '🌙 暗色';
+  darkBtn.addEventListener('click', toggleDark);
+  panel.appendChild(darkBtn);
+}
+
+// ---- 侧边栏开关 ----
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('open');
+}
+
+// ---- 阅读进度条 ----
+function updateProgress() {
+  const bar = document.querySelector('.progress-bar');
+  if (!bar) return;
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+  bar.style.transform = 'scaleX(' + progress + ')';
+}
+
+// ---- 回到顶部 ----
+function initBackToTop() {
+  const btn = document.createElement('button');
+  btn.className = 'back-to-top';
+  btn.textContent = '↑';
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  document.body.appendChild(btn);
+  window.addEventListener('scroll', function() {
+    btn.classList.toggle('visible', (window.scrollY || document.documentElement.scrollTop) > 400);
+    updateProgress();
+  }, { passive: true });
+}
+
+// ---- 键盘翻页 ----
+function initKeyNav() {
+  document.addEventListener('keydown', function(e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'ArrowLeft') {
+      const prev = document.querySelector('.nav-btn.prev');
+      if (prev && prev.href) window.location.href = prev.href;
+    }
+    if (e.key === 'ArrowRight') {
+      const next = document.querySelector('.nav-btn.next');
+      if (next && next.href) window.location.href = next.href;
+    }
+  });
+}
+
+// ---- 启动所有模块 ----
+renderNav();
+renderThemePanel();
+initBackToTop();
+initKeyNav();
+
+</script>
+</body>
+</html>

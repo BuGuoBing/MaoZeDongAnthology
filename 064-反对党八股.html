@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>反对党八股 — 我的书籍</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.85;
+  transition: background 0.35s ease, color 0.25s ease;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+[data-theme="blue"] {
+  --bg: #f8f9fc;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #ffffff;
+  --text: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-bg: #eff6ff;
+  --accent-text: #2563eb;
+  --code-bg: #f1f5f9;
+  --blockquote-bg: #f0f9ff;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="blue-dark"] {
+  --bg: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-sidebar: #1e293b;
+  --text: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #334155;
+  --border-light: #1e293b;
+  --accent: #60a5fa;
+  --accent-hover: #93bbfd;
+  --accent-bg: #1e3a5f;
+  --accent-text: #93c5fd;
+  --code-bg: #1e293b;
+  --blockquote-bg: #172554;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.4);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="green"] {
+  --bg: #f6f9f4;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #f9fbf8;
+  --text: #1a2e1a;
+  --text-secondary: #4a6a4a;
+  --text-muted: #8aaa8a;
+  --border: #d4e4d4;
+  --border-light: #eaf2ea;
+  --accent: #2d8a4e;
+  --accent-hover: #1f6b3a;
+  --accent-bg: #edf7ef;
+  --accent-text: #2d8a4e;
+  --code-bg: #f0f5ee;
+  --blockquote-bg: #f0f8f0;
+  --shadow: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.06);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="green-dark"] {
+  --bg: #0d1a0d;
+  --bg-secondary: #162416;
+  --bg-sidebar: #162416;
+  --text: #d4e8d4;
+  --text-secondary: #8aaa8a;
+  --text-muted: #5a7a5a;
+  --border: #2a4a2a;
+  --border-light: #1e361e;
+  --accent: #4ade80;
+  --accent-hover: #6ee7a0;
+  --accent-bg: #14352a;
+  --accent-text: #86efac;
+  --code-bg: #162416;
+  --blockquote-bg: #0d2818;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.4);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="orange"] {
+  --bg: #fdf8f3;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #fffcf8;
+  --text: #2d1f0e;
+  --text-secondary: #7a6548;
+  --text-muted: #b8a080;
+  --border: #e8ddd0;
+  --border-light: #f5efe6;
+  --accent: #d97706;
+  --accent-hover: #b45309;
+  --accent-bg: #fef3c7;
+  --accent-text: #b45309;
+  --code-bg: #faf5ee;
+  --blockquote-bg: #fffbeb;
+  --shadow: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.06);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="orange-dark"] {
+  --bg: #1a1308;
+  --bg-secondary: #2a1f10;
+  --bg-sidebar: #2a1f10;
+  --text: #f0e0c8;
+  --text-secondary: #c8a878;
+  --text-muted: #8a7050;
+  --border: #4a3820;
+  --border-light: #3a2a15;
+  --accent: #fbbf24;
+  --accent-hover: #fcd34d;
+  --accent-bg: #3a2a10;
+  --accent-text: #fde68a;
+  --code-bg: #2a1f10;
+  --blockquote-bg: #2a1f08;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.4);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="purple"] {
+  --bg: #f8f5fc;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #faf8fe;
+  --text: #1e1533;
+  --text-secondary: #6b5b8a;
+  --text-muted: #9a8ab8;
+  --border: #ddd4ee;
+  --border-light: #f0ebf8;
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+  --accent-bg: #f3eeff;
+  --accent-text: #7c3aed;
+  --code-bg: #f5f0fa;
+  --blockquote-bg: #f5f0ff;
+  --shadow: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.06);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="purple-dark"] {
+  --bg: #0f0a1a;
+  --bg-secondary: #1a1230;
+  --bg-sidebar: #1a1230;
+  --text: #e0d4f0;
+  --text-secondary: #a88dd4;
+  --text-muted: #6b5b8a;
+  --border: #332860;
+  --border-light: #221840;
+  --accent: #a78bfa;
+  --accent-hover: #c4b5fd;
+  --accent-bg: #2d1f5e;
+  --accent-text: #c4b5fd;
+  --code-bg: #1a1230;
+  --blockquote-bg: #1a0f30;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.4);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="rose"] {
+  --bg: #fdf5f6;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #fff8f9;
+  --text: #2d1518;
+  --text-secondary: #8a5a60;
+  --text-muted: #b88a90;
+  --border: #f0d4d8;
+  --border-light: #f8eaed;
+  --accent: #e11d48;
+  --accent-hover: #be123c;
+  --accent-bg: #fff1f2;
+  --accent-text: #e11d48;
+  --code-bg: #faf0f1;
+  --blockquote-bg: #fff5f6;
+  --shadow: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.06);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="rose-dark"] {
+  --bg: #1a0a0c;
+  --bg-secondary: #2a1418;
+  --bg-sidebar: #2a1418;
+  --text: #f0d4d8;
+  --text-secondary: #c88a92;
+  --text-muted: #8a5a60;
+  --border: #4a2830;
+  --border-light: #3a1e24;
+  --accent: #fb7185;
+  --accent-hover: #fda4af;
+  --accent-bg: #3a1520;
+  --accent-text: #fda4af;
+  --code-bg: #2a1418;
+  --blockquote-bg: #2a0e14;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.4);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="gray"] {
+  --bg: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #f5f5f5;
+  --text: #262626;
+  --text-secondary: #737373;
+  --text-muted: #a3a3a3;
+  --border: #e5e5e5;
+  --border-light: #f5f5f5;
+  --accent: #525252;
+  --accent-hover: #404040;
+  --accent-bg: #f5f5f5;
+  --accent-text: #404040;
+  --code-bg: #f5f5f5;
+  --blockquote-bg: #fafafa;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+[data-theme="gray-dark"] {
+  --bg: #171717;
+  --bg-secondary: #262626;
+  --bg-sidebar: #1e1e1e;
+  --text: #e5e5e5;
+  --text-secondary: #a3a3a3;
+  --text-muted: #737373;
+  --border: #404040;
+  --border-light: #2a2a2a;
+  --accent: #d4d4d4;
+  --accent-hover: #e5e5e5;
+  --accent-bg: #333333;
+  --accent-text: #e5e5e5;
+  --code-bg: #262626;
+  --blockquote-bg: #1e1e1e;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.4);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+:root, [data-theme=""] {
+  --bg: #f8f9fc;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #ffffff;
+  --text: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-bg: #eff6ff;
+  --accent-text: #2563eb;
+  --code-bg: #f1f5f9;
+  --blockquote-bg: #f0f9ff;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
+  --sidebar-w: 300px;
+  --content-max: 820px;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+
+/* ============ 侧边栏 ============ */
+.sidebar {
+  width: var(--sidebar-w);
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  overflow-y: auto;
+  z-index: 100;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-track { background: transparent; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+.sidebar-header {
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.site-title {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.theme-panel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.theme-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: all 0.2s;
+  background: var(--bg-secondary);
+  padding: 0;
+  position: relative;
+}
+
+.theme-dot:hover {
+  transform: scale(1.2);
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.theme-dot.active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+  background: var(--accent-bg);
+}
+
+.theme-dot .tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: var(--bg);
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.theme-dot:hover .tooltip {
+  opacity: 1;
+}
+
+.dark-toggle {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dark-toggle:hover {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.sidebar-nav {
+  padding: 8px 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.nav-group { margin-bottom: 4px; }
+
+.nav-group-title {
+  padding: 12px 20px 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.nav-link {
+  display: block;
+  padding: 7px 20px 7px 24px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.88rem;
+  border-left: 3px solid transparent;
+  transition: all 0.15s ease;
+  line-height: 1.5;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--accent-text);
+  background: var(--accent-bg);
+}
+
+.nav-link.active {
+  color: var(--accent-text);
+  border-left-color: var(--accent);
+  background: var(--accent-bg);
+  font-weight: 600;
+}
+
+/* ============ 遮罩 ============ */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 50;
+  backdrop-filter: blur(2px);
+}
+
+/* ============ 主区域 ============ */
+.main {
+  flex: 1;
+  margin-left: var(--sidebar-w);
+  min-width: 0;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--text);
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.menu-btn:hover { background: var(--accent-bg); }
+
+.breadcrumb {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ============ 内容区 ============ */
+.content {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+}
+
+.page-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 36px;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border);
+}
+
+.content h2 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-light);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 36px 0 14px;
+  letter-spacing: -0.01em;
+}
+
+.content h4 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin: 28px 0 10px;
+}
+
+.content p {
+  margin: 14px 0;
+  color: var(--text);
+}
+
+.content ul, .content ol {
+  margin: 14px 0;
+  padding-left: 28px;
+}
+
+.content li {
+  margin: 6px 0;
+  color: var(--text);
+}
+
+.content li::marker {
+  color: var(--accent);
+}
+
+.content a {
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 30%, transparent);
+  text-underline-offset: 3px;
+  transition: all 0.15s;
+}
+
+.content a:hover {
+  text-decoration-color: var(--accent);
+}
+
+/* 引用块 */
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  padding: 16px 24px;
+  margin: 24px 0;
+  background: var(--blockquote-bg);
+  border-radius: 0 12px 12px 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.content blockquote p { margin: 6px 0; }
+
+/* 图片 */
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: var(--shadow-lg);
+}
+
+/* 表格 */
+.content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 24px 0;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.content th, .content td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.content th {
+  background: var(--accent-bg);
+  font-weight: 600;
+  color: var(--accent-text);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.content tr:last-child td { border-bottom: none; }
+
+.content tr:hover td {
+  background: var(--accent-bg);
+}
+
+/* 代码 */
+.content pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 22px;
+  overflow-x: auto;
+  margin: 20px 0;
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  box-shadow: var(--shadow);
+}
+
+.content code {
+  font-family: var(--font-code);
+  background: var(--code-bg);
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  color: var(--accent-text);
+}
+
+.content pre code {
+  background: none;
+  padding: 0;
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.content .highlight {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 22px;
+  overflow-x: auto;
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+}
+
+.content .highlight pre {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.anchor-link {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 8px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-size: 0.8em;
+}
+
+h2:hover .anchor-link,
+h3:hover .anchor-link { opacity: 0.6; }
+
+/* 水平线 */
+.content hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 40px 0;
+}
+
+/* 列表嵌套 */
+.content ul ul, .content ol ol,
+.content ul ol, .content ol ul {
+  margin: 4px 0;
+}
+
+/* 强调 */
+.content strong { font-weight: 700; color: var(--text); }
+.content em { font-style: italic; }
+
+/* ============ 翻页导航 ============ */
+.page-nav {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 24px 40px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.nav-btn {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 22px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow);
+}
+
+.nav-btn:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.nav-btn .nav-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.nav-btn .nav-title {
+  font-size: 0.95rem;
+  color: var(--accent-text);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.nav-btn.disabled { visibility: hidden; }
+.nav-btn.next { text-align: right; }
+
+/* ============ 首页 ============ */
+.hero-section {
+  text-align: center;
+  padding: 48px 0 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-section .subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 32px 0;
+}
+
+.chapter-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow);
+}
+
+.chapter-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.chapter-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  color: var(--accent-text);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chapter-card h3::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background: var(--accent);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.chapter-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-card li {
+  margin: 4px 0;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.chapter-card li:last-child { border-bottom: none; }
+
+.chapter-card a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chapter-card a::before {
+  content: '›';
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: transform 0.15s;
+}
+
+.chapter-card a:hover {
+  color: var(--accent-text);
+}
+
+.chapter-card a:hover::before {
+  transform: translateX(4px);
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 40px 0 20px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 24px;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* ============ 进度条 ============ */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: 200;
+  transition: transform 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ============ 回到顶部 ============ */
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* ============ 响应式 ============ */
+@media (max-width: 900px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .overlay.open { display: block; }
+  .main { margin-left: 0; }
+  .menu-btn { display: block; }
+  .content { padding: 28px 20px 60px; }
+  .page-nav { padding: 16px 20px 60px; grid-template-columns: 1fr; }
+  .progress-bar { left: 0; }
+  .page-title { font-size: 1.7rem; }
+  .chapter-grid { grid-template-columns: 1fr; }
+  .hero-section h1 { font-size: 2rem; }
+  .topbar { padding: 10px 16px; }
+}
+
+@media (max-width: 480px) {
+  .content { padding: 20px 16px 40px; }
+  .page-title { font-size: 1.5rem; }
+  .hero-section h1 { font-size: 1.6rem; }
+}
+
+/* ============ 打印 ============ */
+@media print {
+  .sidebar, .topbar, .page-nav, .back-to-top, .progress-bar, .overlay { display: none !important; }
+  .main { margin-left: 0; }
+  .content { max-width: 100%; padding: 0; }
+  .page-title { border-bottom: 2px solid #000; }
+  .content pre, .content .highlight { border: 1px solid #ddd; }
+}
+
+/* ============ 选中文字 ============ */
+::selection {
+  background: var(--accent-bg);
+  color: var(--accent-text);
+}
+
+/* ============ 滚动条（全局） ============ */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+</style>
+</head>
+<body>
+<div class="progress-bar"></div>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="site-title">我的书籍</a>
+      <div class="theme-panel" id="themePanel"></div>
+    </div>
+    <nav class="sidebar-nav" id="sidebarNav"></nav>
+  </aside>
+
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+      <span class="breadcrumb">我的书籍</span>
+    </header>
+
+    <article class="content">
+      <h1 id="_1">反对党八股<a class="anchor-link" href="#_1" title="Permanent link">&para;</a></h1>
+<p>（一九四二年二月八日）  </p>
+<blockquote>
+<p>这是毛泽东在延安干部会上的讲演。   </p>
+</blockquote>
+<p>刚才凯丰⑴同志讲了今天开会的宗旨。我现在想讲的是：主观主义和宗派主义怎样拿党八股⑵做它们的宣传工具，或表现形式。我们反对主观主义和宗派主义，如果不连党八股也给以清算，那它们就还有一个藏身的地方，它们还可以躲起来。如果我们连党八股也打倒了，那就算对于主观主义和宗派主义最后地“将一军”⑶，弄得这两个怪物原形毕露，“老鼠过街，人人喊打”，这两个怪物也就容易消灭了。 <br />
+　　一个人写党八股，如果只给自己看，那倒还不要紧。如果送给第二个人看，人数多了一倍，已属害人不浅。如果还要贴在墙上，或付油印，或登上报纸，或印成一本书，那问题可就大了，它就可以影响许多的人。而写党八股的人们，却总是想写给许多人看的。这就非加以揭穿，把它打倒不可。 <br />
+　　党八股也就是一种洋八股。这洋八股，鲁迅早就反对过的⑷。我们为什么又叫它做党八股呢？这是因为它除了洋气之外，还有一点土气。也算一个创作吧！谁说我们的人一点创作也没有呢？这就是一个！（大笑） <br />
+　　党八股在我们党内已经有了一个长久的历史；特别是在土地革命时期，有时竟闹得很严重。 <br />
+　　从历史来看，党八股是对于五四运动的一个反动。 <br />
+　　五四运动时期，一班新人物反对文言文，提倡白话文，反对旧教条，提倡科学和民主，这些都是很对的。在那时，这个运动是生动活泼的，前进的，革命的。那时的统治阶级都拿孔夫子的道理教学生，把孔夫子的一套当作宗教教条一样强迫人民信奉，做文章的人都用文言文。总之，那时统治阶级及其帮闲者们的文章和教育，不论它的内容和形式，都是八股式的，教条式的。这就是老八股、老教条。揭穿这种老八股、老教条的丑态给人民看，号召人民起来反对老八股、老教条，这就是五四运动时期的一个极大的功绩。五四运动还有和这相联系的反对帝国主义的大功绩；这个反对老八股、老教条的斗争，也是它的大功绩之一。但到后来就产生了洋八股、洋教条。我们党内的一些违反了马克思主义的人则发展这种洋八股、洋教条，成为主观主义、宗派主义和党八股的东西。这些就都是新八股、新教条。这种新八股、新教条，在我们许多同志的头脑中弄得根深蒂固，使我们今天要进行改造工作还要费很大的气力。这样看来，“五四”时期的生动活泼的、前进的、革命的、反对封建主义的老八股、老教条的运动，后来被一些人发展到了它的反对方面，产生了新八股、新教条。它们不是生动活泼的东西，而是死硬的东西了；不是前进的东西，而是后退的东西了；不是革命的东西，而是阻碍革命的东西了。这就是说，洋八股或党八股，是五四运动本来性质的反动。但五四运动本身也是有缺点的。那时的许多领导人物，还没有马克思主义的批判精神，他们使用的方法，一般地还是资产阶级的方法，即形式主义的方法。他们反对旧八股、旧教条，主张科学和民主，是很对的。但是他们对于现状，对于历史，对于外国事物，没有历史唯物主义的批判精神，所谓坏就是绝对的坏，一切皆坏；所谓好就是绝对的好，一切皆好。这种形式主义地看问题的方法，就影响了后来这个运动的发展。五四运动的发展，分成了两个潮流。一部分人继承了五四运动的科学和民主的精神，并在马克思主义的基础上加以改造，这就是共产党人和若干党外马克思主义者所做的工作。另一部分人则走到资产阶级的道路上去，是形式主义向右的发展。但在共产党内也不是一致的，其中也有一部分人发生偏向，马克思主义没有拿得稳，犯了形式主义的错误，这就是主观主义、宗派主义和党八股，这是形式主义向“左”的发展。这样看来，党八股这种东西，一方面是五四运动的积极因素的反动，一方面也是五四运动的消极因素的继承、继续或发展，并不是偶然的东西。我们懂得这一点是有好处的。如果“五四”时期反对老八股和老教条主义是革命的和必需的，那末，今天我们用马克思主义来批判新八股和新教条主义也是革命的和必需的。如果“五四”时期不反对老八股和老教条主义，中国人民的思想就不能从老八股和老教条主义的束缚下面获得解放，中国就不会有自由独立的希望。这个工作，五四运动时期还不过是一个开端，要使全国人民完全脱离老八股和老教条主义的统治，还须费很大的气力，还是今后革命改造路上的一个大工程。如果我们今天不反对新八股和新教条主义，则中国人民的思想又将受另一个形式主义的束缚。至于我们党内一部分（当然只是一部分）同志所中的党八股的毒，所犯的教条主义的错误，如果不除去，那末，生动活泼的革命精神就不能启发，拿不正确态度对待马克思主义的恶习就不能肃清，真正的马克思主义就不能得到广泛的传播和发展；而对于老八股和老教条在全国人民中间的影响，以及洋八股和洋教条在全国许多人中间的影响，也就不能进行有力的斗争，也就达不到加以摧毁廓清的目的。 <br />
+　　主观主义、宗派主义和党八股，这三种东西，都是反马克思主义的，都不是无产阶级所需要的，而是剥削阶级所需要的。这些东西在我们党内，是小资产阶级思想的反映。中国是一个小资产阶级成分极其广大的国家，我们党是处在这个广大阶级的包围中，我们又有很大数量的党员是出身于这个阶级的，他们都不免或长或短地拖着一条小资产阶级的尾巴进党来。小资产阶级革命分子的狂热性和片面性，如果不加以节制，不加以改造，就很容易产生主观主义、宗派主义，它的一种表现形式就是洋八股，或党八股。 <br />
+　　要做对于这些东西的肃清工作和打扫工作，是不容易的。做起来必须得当，就是说，要好好地说理。如果说理说得好，说得恰当，那是会有效力的。说理的首先一个方法，就是重重地给患病者一个刺激，向他们大喝一声，说：“你有病呀！”使患者为之一惊，出一身汗，然后好好地叫他们治疗。 <br />
+　　现在来分析一下党八股的坏处在什么地方。我们也仿照八股文章的笔法⑸来一个“八股”，以毒攻毒，就叫做八大罪状吧。 <br />
+　　党八股的第一条罪状是：空话连篇，言之无物。我们有些同志欢喜写长文章，但是没有什么内容，真是“懒婆娘的裹脚，又长又臭”。为什么一定要写得那么长，又那么空空洞洞的呢？只有一种解释，就是下决心不要群众看。因为长而且空，群众见了就摇头，哪里还肯看下去呢？只好去欺负幼稚的人，在他们中间散布坏影响，造成坏习惯。去年六月二十二日，苏联进行那么大的反侵略战争，斯大林在七月三日发表了一篇演说，还只有我们《解放日报》⑹一篇社论那样长。要是我们的老爷写起来，那就不得了，起码得有几万字。现在是在战争的时期，我们应该研究一下文章怎样写得短些，写得精粹些。延安虽然还没有战争，但军队天天在前方打仗，后方也唤工作忙，文章太长了，有谁来看呢？有些同志在前方也喜欢写长报告。他们辛辛苦苦地写了，送来了，其目的是要我们看的。可是怎么敢看呢？长而空不好，短而空就好吗？也不好。我们应当禁绝一切空话。但是主要的和首先的任务，是把那些又长又臭的懒婆娘的裹脚，赶快扔到垃圾桶里去。或者有人要说：《资本论》不是很长的吗？那又怎么办？这是好办的，看下去就是了。俗话说：“到什么山上唱什么歌。”又说：“看菜吃饭，量体裁衣。”我们无论做什么事都要看情形办理，文章和演说也是这样。我们反对的是空话连篇言之无物的八股调，不是说任何东西都以短为好。战争时期固然需要短文章，但尤其需要有内容的文章。最不应该、最要反对的是言之无物的文章。演说也是一样，空话连篇言之无物的演说，是必须停止的。 <br />
+　　党八股的第二条罪状是：装腔作势，借以吓人。有些党八股，不只是空话连篇，而且装样子故意吓人，这里面包含着很坏的毒素。空话连篇，言之无物，还可以说是幼稚；装腔作势，借以吓人，则不但是幼稚，简直是无赖了。鲁迅曾经批评过这种人，他说：“辱骂和恐吓决不是战斗。”⑺科学的东西，随便什么时候都是不怕人家批评的，因为科学是真理，决不怕人家驳。主观主义和宗派主义的东西，表现在党八股式的文章和演说里面，却生怕人家驳，非常胆怯，于是就靠装样子吓人；以为这一吓，人家就会闭口，自己就可以“得胜回朝”了。这种装腔作势的东西，不能反映真理，而是妨害真理的。凡真理都不装样子吓人，它只是老老实实地说下去和做下去。从前许多同志的文章和演说里面，常常有两个名词：一个叫做“残酷斗争”，一个叫做“无情打击”。这种手段，用了对付敌人或敌对思想是完全必要的，用了对付自己的同志则是错误的。党内也常常有敌人和敌对思想混进来，如《苏联共产党（布）历史简要读本》结束语第四条所说的那样。对于这种人，毫无疑义地是应该采用残酷斗争或无情打击的手段的，因为那些坏人正在利用这种手段对付党，我们如果还对他们宽容，那就会正中坏人的奸计。但是不能用同一手段对付偶然犯错误的同志；对于这类同志，就须使用批评和自我批评的方法，这就是《苏联共产党（布）历史简要读本》结束语第五条所说的方法。从前我们那些同志之所以向这些同志也大讲其“残酷斗争”和“无情打击”，一方面是没有分析对象，一方面就是为着装腔作势，借以吓人。无论对什么人，装腔作势借以吓人的方法，都是要不得的。因为这种吓人战术，对敌人是毫无用处，对同志只有损害。这种吓人战术，是剥削阶级以及流氓无产者所惯用的手段，无产阶级不需要这类手段。无产阶级的最尖锐最有效的武器只有一个，那就是严肃的战斗的科学态度。共产党不靠吓人吃饭，而是靠马克思列宁主义的真理吃饭，靠实事求是吃饭，靠科学吃饭。至于以装腔作势来达到名誉和地位的目的，那更是卑劣的念头，不待说的了。总之，任何机关做决定，发指示，任何同志写文章，做演说，一概要靠马克思列宁主义的真理，要靠有用。只有靠了这个才能争取革命胜利，其他都是无益的。 <br />
+　　党八股的第三条罪状是：无的放矢，不看对象。早几年，在延安城墙上，曾经看见过这样一个标语：“工人农民联合起来争取抗日胜利。”这个标语的意思并不坏，可是那工人的工字第二笔不是写的一直，而是转了两个弯子，写成了“—ㄣ—”字。人字呢？在右边一笔加了三撇，写成了“[人彡]”字。这位同志是古代文人学士的学生是无疑的了，可是他却要写在抗日时期延安这地方的墙壁上，就有些莫名其妙了。大概他的意思也是发誓不要老百姓看，否则就很难得到解释。共产党员如果真想做宣传，就要看对象，就要想一想自己的文章、演说、谈话、写字是给什么人看、给什么人听的，否则就等于下决心不要人看，不要人听。许多人常常以为自己写的讲的人家都看得很懂，听得很懂，其实完全不是那么一回事，因为他写的和讲的是党八股，人家哪里会懂呢？“对牛弹琴”这句话，含有讥笑对象的意思。如果我们除去这个意思，放进尊重对象的意思去，那就只剩下讥笑弹琴者这个意思了。为什么不看对象乱弹一顿呢？何况这是党八股，简直是老鸦声调，却偏要向人民群众哇哇地叫。射箭要看靶子，弹琴要看听众，写文章做演说倒可以不看读者不看听众吗？我们和无论什么人做朋友，如果不懂得彼此的心，不知道彼此心里面想些什么东西，能够做成知心朋友吗？做宣传工作的人，对于自己的宣传对象没有调查，没有研究，没有分析，乱讲一顿，是万万不行的。 <br />
+　　党八股的第四条罪状是：语言无味，像个瘪三⑻。上海人叫小瘪三的那批角色，也很像我们的党八股，干瘪得很，样子十分难看。如果一篇文章，一个演说，颠来倒去，总是那几个名词，一套“学生腔”，没有一点生动活泼的语言，这岂不是语言无味，面目可憎，像个瘪三吗？一个人七岁入小学，十几岁入中学，二十多岁在大学毕业，没有和人民群众接触过，语言不丰富，单纯得很，那是难怪的。但我们是革命党，是为群众办事的，如果也不学群众的语言，那就办不好。现在我们有许多做宣传工作的同志，也不学语言。他们的宣传，乏味得很；他们的文章，就没有多少人欢喜看；他们的演说，也没有多少人欢喜听。为什么语言要学，并且要用很大的气力去学呢？因为语言这东西，不是随便可以学好的，非下苦功不可。第一，要向人民群众学习语言。人民的语汇是很丰富的，生动活泼的，表现实际生活的。我们很多人没有学好语言，所以我们在写文章做演说时没有几句生动活泼切实有力的话，只有死板板的几条筋，像瘪三一样，瘦得难看，不像一个健康的人。第二，要从外国语言中吸收我们所需要的成分。我们不是硬搬或滥用外国语言，是要吸收外国语言中的好东西，于我们适用的东西。因为中国原有语汇不够用，现在我们的语汇中就有很多是从外国吸收来的。例如今天开的干部大会，这“干部”两个字，就是从外国学来的。我们还要多多吸收外国的新鲜东西，不但要吸收他们的进步道理，而且要吸收他们的新鲜用语。第三，我们还要学习古人语言中有生命的东西。由于我们没有努力学习语言，古人语言中的许多还有生气的东西我们就没有充分地合理地利用。当然我们坚决反对去用已经死了的语汇和典故，这是确定了的，但是好的仍然有用的东西还是应该继承。现在中党八股毒太深的人，对于民间的、外国的、古人的语言中有用的东西，不肯下苦功去学，因此，群众就不欢迎他们枯燥无味的宣传，我们也不需要这样蹩脚的不中用的宣传家。什么是宣传家？不但教员是宣传家，新闻记者是宣传家，文艺作者是宣传家，我们的一切工作干部也都是宣传家。比如军事指挥员，他们并不对外发宣言，但是他们要和士兵讲话，要和人民接洽，这不是宣传是什么？一个人只要他对别人讲话，他就是在做宣传工作。只要他不是哑巴，他就总有几句话要讲的。所以我们的同志都非学习语言不可。 <br />
+　　党八股的第五条罪状是：甲乙丙丁，开中药铺。你们去看一看中药铺，那里的药柜子上有许多抽屉格子，每个格子上面贴着药名，当归、熟地、大黄、芒硝，应有尽有。这个方法，也被我们的同志学到了。写文章，做演说，著书，写报告，第一是大壹贰叁肆，第二是小一二三四，第三是甲乙丙丁，第四是子丑寅卯，还有大ABCD，小abcd，还有阿拉伯数字，多得很！幸亏古人和外国人替我们造好了这许多符号，使我们开起中药铺来毫不费力。一篇文章充满了这些符号，不提出问题，不分析问题，不解决问题，不表示赞成什么，反对什么，说来说去还是一个中药铺，没有什么真切的内容。我不是说甲乙丙丁等字不能用，而是说那种对待问题的方法不对。现在许多同志津津有味于这个开中药铺的方法，实在是一种最低级、最幼稚、最庸俗的方法。这种方法就是形式主义的方法，是按照事物的外部标志来分类，不是按照事物的内部联系来分类的。单单按照事物的外部标志，使用一大堆互相没有内部联系的概念，排列成一篇文章、一篇演说或一个报告，这种办法，他自己是在做概念的游戏，也会引导人家都做这类游戏，使人不用脑筋想问题，不去思考事物的本质，而满足于甲乙丙丁的现象罗列。什么叫问题？问题就是事物的矛盾。哪里有没有解决的矛盾，哪里就有问题。既有问题，你总得赞成一方面，反对另一方面，你就得把问题提出来。提出问题，首先就要对于问题即矛盾的两个基本方面加以大略的调查和研究，才能懂得矛盾的性质是什么，这就是发现问题的过程。大略的调查和研究可以发现问题，提出问题，但是还不能解决问题。要解决问题，还须作系统的周密的调查工作和研究工作，这就是分析的过程。提出问题也要用分析，不然，对着模糊杂乱的一大堆事物的现象，你就不能知道问题即矛盾的所在。这里所讲的分析过程，是指系统的周密的分析过程。常常问题是提出了，但还不能解决，就是因为还没有暴露事物的内部联系，就是因为还没有经过这种系统的周密的分析过程，因而问题的面貌还不明晰，还不能做综合工作，也就不能好好地解决问题。一篇文章或一篇演说，如果是重要的带指导性质的，总得要提出一个什么问题，接着加以分析，然后综合起来，指明问题的性质，给以解决的办法，这样，就不是形式主义的方法所能济事。因为这种幼稚的、低级的、庸俗的、不用脑筋的形式主义的方法，在我们党内很流行，所以必须揭破它，才能使大家学会应用马克思主义的方法去观察问题、提出问题、分析问题和解决问题，我们所办的事才能办好，我们的革命事业才能胜利。 <br />
+　　党八股的第六条罪状是：不负责任，到处害人。上面所说的那些，一方面是由于幼稚而来，另一方面也是由于责任心不足而来的。拿洗脸作比方，我们每天都要洗脸，许多人并且不止洗一次，洗完之后还要拿镜子照一照，要调查研究一番，（大笑）生怕有什么不妥当的地方。你们看，这是何等地有责任心呀！我们写文章，做演说，只要像洗脸这样负责，就差不多了。拿不出来的东西就不要拿出来。须知这是要去影响别人的思想和行动的啊！一个人偶然一天两天不洗脸，固然也不好，洗后脸上还留着一个两个黑点，固然也不雅观，但倒并没有什么大危险。写文章做演说就不同了，这是专为影响人的，我们的同志反而随随便便，这就叫做轻重倒置。许多人写文章，做演说，可以不要预先研究，不要预先准备；文章写好之后，也不多看几遍，像洗脸之后再照照镜子一样，就马马虎虎地发表出去。其结果，往往是“下笔千言，离题万里”，仿佛像个才子，实则到处害人。这种责任心薄弱的坏习惯，必须改正才好。 <br />
+　　第七条罪状是：流毒全党，妨害革命。第八条罪状是：传播出去，祸国殃民。这两条意义自明，无须多说。这就是说，党八股如不改革，如果听其发展下去，其结果之严重，可以闹到很坏的地步。党八股里面藏的是主观主义、宗派主义的毒物，这个毒物传播出去，是要害党害国的。 <br />
+　　上面这八条，就是我们申讨党八股的檄文。 <br />
+　　党八股这个形式，不但不便于表现革命精神，而且非常容易使革命精神窒息。要使革命精神获得发展，必须抛弃党八股，采取生动活泼新鲜有力的马克思列宁主义的文风。这种文风，早已存在，但尚未充实，尚未得到普遍的发展。我们破坏了洋八股和党八股之后，新的文风就可以获得充实，获得普遍的发展，党的革命事业，也就可以向前推进了。 <br />
+　　不但文章里演说里有党八股，开会也有的。“一开会，二报告，三讨论，四结论，五散会”。假使每处每回无大无小都要按照这个死板的程序，不也就是党八股吗？在会场上做起“报告”来，则常常就是“一国际，二国内，三边区，四本部”，会是常常从早上开到晚上，没有话讲的人也要讲一顿，不讲好像对人不起。总之，不看实际情形，死守着呆板的旧形式、旧习惯，这种现象，不是也应该加以改革吗？ <br />
+　　现在许多人在提倡民族化、科学化、大众化了，这很好。但是“化”者，彻头彻尾彻里彻外之谓也；有些人则连“少许”还没有实行，却在那里提倡“化”呢！所以我劝这些同志先办“少许”，再去办“化”，不然，仍旧脱离不了教条主义和党八股，这叫做眼高手低，志大才疏，没有结果的。例如那些口讲大众化而实是小众化的人，就很要当心，如果有一天大众中间有一个什么人在路上碰到他，对他说：“先生，请你化一下给我看。”就会将起军的。如果是不但口头上提倡提倡而且自己真想实行大众化的人，那就要实地跟老百姓去学，否则仍然“化”不了的。有些天天喊大众化的人，连三句老百姓的话都讲不来，可见他就没有下过决心跟老百姓学，实在他的意思仍是小众化。 <br />
+　　今天会场上散发了一个题名《宣传指南》的小册子，里面包含四篇文章，我劝同志们多看几遍。 <br />
+　　第一篇，是从《苏联共产党（布）历史简要读本》上摘下来的，讲的是列宁怎样做宣传。其中讲到列宁写传单的情形：“在列宁领导下，彼得堡‘工人阶级解放斗争协会’第一次在俄国开始把社会主义与工人运动结合起来。当某一个工厂里爆发罢工时，‘斗争协会’因为经过自己小组中的参加者而很熟悉各企业中的情形，立刻就印发传单、印发社会主义的宣言来响应。在这些传单里，揭露出厂主虐待工人的事实，说明工人应如何为自身的利益而奋斗，载明工人群众的要求。这些传单把资本主义机体上的痈疽，工人的穷困生活，工人每日由十二小时至十四小时的过度沉重的劳动，工人之毫无权利等等真情实况，都揭露无余。同时，在这些传单里，又提出了相当的政治要求。” <br />
+　　是“很熟悉”啊！是“揭露无余”啊！ <br />
+　　“一八九四年末，列宁在工人巴布石金参加下，写了第一个这样的鼓动传单和告彼得堡城塞棉尼可夫工厂罢工工人书。” <br />
+　　写一个传单要和熟悉情况的同志商量。列宁就是根据这样的调查和研究来写文章做工作的。 <br />
+　　“每一个这样的传单，都大大提高了工人们的精神。工人们看见了，社会主义者是帮助他们、保护他们的。”⑼ <br />
+　　我们是赞成列宁的吗？如果是的话，就得依照列宁的精神去工作。不是空话连篇，言之无物；不是无的放矢，不看对象；也不是自以为是，夸夸其谈；而是要照着列宁那样地去做。 <br />
+　　第二篇，是从季米特洛夫⑽在共产国际第七次大会的报告中摘下来的。季米特洛夫说了些什么呢？他说：“应当学会不用书本上的公式而用为群众事业而奋斗的战士们的语言来和群众讲话，这些战士们的每一句话，每一个思想，都反映出千百万群众的思想和情绪。” <br />
+　　“如果我们没有学会说群众懂得的话，那末广大群众是不能领会我们的决议的。我们远不是随时都善于简单地、具体地、用群众所熟悉和懂得的形象来讲话。我们还没有能够抛弃背得烂熟的抽象的公式。事实上，你们只要瞧一瞧我们的传单、报纸、决议和提纲，就可以看到：这些东西常常是用这样的语言写成的，写得这样地艰深，甚至于我们党的干部都难于懂得，更用不着说普通工人了。” <br />
+　　怎么样？这不是把我们的毛病讲得一针见血吗？不错，党八股中国有，外国也有，可见是通病。（笑）但是我们总得照着季米特洛夫同志的指示把我们自己的毛病赶快治好才行。 <br />
+　　“我们每一个人，都应当切实领会下面这条起码的规则，把它当作定律，当作布尔什维克的定律：当你写东西或讲话的时候，始终要想到使每个普通工人都懂得，都相信你的号召，都决心跟着你走。要想到你究竟为什么人写东西，向什么人讲话。”⑾ <br />
+　　这就是共产国际给我们治病的药方，是必须遵守的。这是“规则”啊！ <br />
+　　第三篇，是从《鲁迅全集》里选出的，是鲁迅复北斗杂志⑿社讨论怎样写文章的一封信。他说些什么呢？他一共列举了八条写文章的规则，我现在抽出几条来说一说。 <br />
+　　第一条：“留心各样的事情，多看看，不看到一点就写。” <br />
+　　讲的是“留心各样的事情”，不是一样半样的事情。讲的是“多看看”，不是只看一眼半眼。我们怎么样？不是恰恰和他相反，只看到一点就写吗？ <br />
+　　第二条：“写不出的时候不硬写。” <br />
+　　我们怎么样？不是明明脑子里没有什么东西硬要大写特写吗？不调查，不研究，提起笔来“硬写”，这就是不负责任的态度。 <br />
+　　第四条：“写完后至少看两遍，竭力将可有可无的字、句、段删去，毫不可惜。宁可将可作小说的材料缩成速写，决不将速写材料拉成小说。” <br />
+　　孔夫子提倡“再思”⒀，韩愈也说“行成于思”⒁，那是古代的事情。现在的事情，问题很复杂，有些事情甚至想三四回还不够。鲁迅说“至少看两遍”，至多呢？他没有说，我看重要的文章不妨看它十多遍，认真地加以删改，然后发表。文章是客观事物的反映，而事物是曲折复杂的，必须反复研究，才能反映恰当；在这里粗心大意，就是不懂得做文章的起码知识。 <br />
+　　第六条：“不生造除自己之外，谁也不懂的形容词之类。” <br />
+　　我们“生造”的东西太多了，总之是“谁也不懂”。句法有长到四五十个字一句的，其中堆满了“谁也不懂的形容词之类”。许多口口声声拥护鲁迅的人们，却正是违背鲁迅的啊！ <br />
+　　最后一篇文章，是中国共产党六届六中全会论宣传的民族化。六届六中全会是一九三八年开的，我们那时曾说：“离开中国特点来谈马克思主义，只是抽象的空洞的马克思主义。”这就是说，必须反对空谈马克思主义；在中国生活的共产党员，必须联系中国的革命实际来研究马克思主义。 <br />
+　　“洋八股必须废止，空洞抽象的调头必须少唱，教条主义必须休息，而代之以新鲜活泼的、为中国老百姓所喜闻乐见的中国作风和中国气派。把国际主义的内容和民族形式分离起来，是一点也不懂国际主义的人们的做法，我们则要把二者紧密地结合起来。在这个问题上，我们队伍中存在着的一些严重的错误，是应该认真地克服的。”⒂ <br />
+　　这里叫洋八股废止，有些同志却实际上还在提倡。这里叫空洞抽象的调头少唱，有些同志却硬要多唱。这里叫教条主义休息，有些同志却叫它起床。总之，有许多人把六中全会通过的报告当做耳边风，好像是故意和它作对似的。 <br />
+　　中央现在做了决定，一定要把党八股和教条主义等类，彻底抛弃，所以我来讲了许多。希望同志们把我所讲的加以考虑，加以分析，同时也分析各人自己的情况。每个人应该把自己好好地想一想，并且把自己想清楚了的东西，跟知心的朋友们商量一下，跟周围的同志们商量一下，把自己的毛病切实改掉。   </p>
+<hr />
+<p>注　　释 <br />
+　　〔1〕 凯丰（一九○六——一九五五），又名何克全，江西萍乡人。当时任中共中央宣传部代理部长。 <br />
+　　〔2〕见本卷《整顿党的作风》注〔1〕。 <br />
+　　〔3〕 “将一军”是中国象棋中的术语。中国象棋采取两军对战的形式，而以一方攻入对方堡垒捉住“将军”（主帅）作为赢棋。凡是一方走了一着棋，使对方的将军有立即被捉的危险时，就叫做向对方“将军”。 <br />
+　　〔4〕反对新旧八股是鲁迅作品里一贯的精神。鲁迅曾在《伪自由书·透底》一文中说：“八股原是蠢笨的产物。一来是考官嫌麻烦——他们的头脑大半是阴沉木做的，——什么代圣贤立言，什么起承转合，文章气韵，都没有一定的标准，难以捉摸，因此，一股一股地定出来，算是合于功令的格式，用这格式来‘衡文’，一眼就看得出多少轻重。二来，连应试的人也觉得又省力，又不费事了。这样的八股，无论新旧，都应当扫荡。”洋八股是五四运动以后一些浅薄的知识分子发展起来的东西，并经过他们的传播，长时期地在革命队伍中存在着。鲁迅在《透底》附录“回祝秀侠信”中批判这种洋八股说：“八股无论新旧，都在扫荡之列，……例如只会‘辱骂’‘恐吓’甚至于‘判决’，而不肯具体地切实地运用科学所求得的公式，去解释每天的新的事实，新的现象，而只抄一通公式，往一切事实上乱凑，这也是一种八股。”（《鲁迅全集》第5卷，人民文学出版社1981年版，第103—106页） <br />
+　　〔5〕 见本书第一卷《中国革命战争的战略问题》注〔52〕。 <br />
+　　〔6〕《解放日报》是中共中央的机关报，一九四一年五月十六日在延安创刊，一九四七年三月二十七日终刊。 <br />
+　　〔7〕这是鲁迅《南腔北调集》中一篇文章的篇名，一九三二年作。（《鲁迅全集》第4卷，人民文学出版社1981年版，第451页） <br />
+　　〔8〕解放以前，上海人称城市中无正当职业而以乞讨为生的游民为瘪三，他们通常是极瘦的。 <br />
+　　〔9〕以上三段引文见《联共（布）党史简明教程》第一章第三节（人民出版社1975年版，第18—19页）。 <br />
+　　〔10〕季米特洛夫（一八八二——一九四九），保加利亚人。一九二一年任工会国际中央理事会理事，一九三五年至一九四三年任共产国际执行委员会总书记。一九四五年十一月回国后，任保加利亚共产党总书记和部长会议主席。 <br />
+　　〔11〕以上三段引文见季米特洛夫一九三五年八月十三日在共产国际第七次代表大会上所作的结论《为工人阶级团结一致反对法西斯主义而斗争》的序言和第六部分《仅仅只有正确的路线还是不够的》。 <br />
+　　〔12〕《北斗》杂志是中国左翼作家联盟在一九三一年至一九三二年间出版的文艺月刊。《答北斗杂志社问》载鲁迅《二心集》。（《鲁迅全集》第4卷，人民文学出版社1981年版，第364—365页） <br />
+　　〔13〕 参见《论语·公冶长》。 <br />
+　　〔14〕韩愈（七六八——八二四），中国唐代著名的大作家。他在《进学解》一文中说：“行成于思，毁于随。”意思是：作事成功由于思考，失败由于不思考。 <br />
+　　〔15〕以上两段引文见《中国共产党在民族战争中的地位》（本书第2卷第534页）。   </p>
+    </article>
+
+    <footer class="page-nav">
+      <a href="063-整顿党的作风.html" class="nav-btn prev">
+          <span class="nav-label">← 上一章</span>
+          <span class="nav-title">整顿党的作风</span>
+        </a>
+      <a href="065-在延安文艺座谈会上的讲话.html" class="nav-btn next">
+          <span class="nav-label">下一章 →</span>
+          <span class="nav-title">在延安文艺座谈会上的讲话</span>
+        </a>
+    </footer>
+  </main>
+</div>
+
+<script>
+const NAV_DATA = [{"title": "章节目录", "sections": [{"url": "000-中国社会各阶级的分析.html", "title": "中国社会各阶级的分析"}, {"url": "001-湖南农民运动考察报告.html", "title": "湖南农民运动考察报告"}, {"url": "002-中国的红色政权为什么能够存在？.html", "title": "中国的红色政权为什么能够存在？"}, {"url": "003-井冈山的斗争.html", "title": "井冈山的斗争"}, {"url": "004-关于纠正党内的错误思想.html", "title": "关于纠正党内的错误思想"}, {"url": "005-星星之火，可以燎原.html", "title": "星星之火，可以燎原"}, {"url": "006-反对本本主义.html", "title": "反对本本主义"}, {"url": "007-必须注意经济工作.html", "title": "必须注意经济工作"}, {"url": "008-怎样分析农村阶级.html", "title": "怎样分析农村阶级"}, {"url": "009-我们的经济政策.html", "title": "我们的经济政策"}, {"url": "010-关心群众生活，注意工作方法.html", "title": "关心群众生活，注意工作方法"}, {"url": "011-论反对日本帝国主义的策略.html", "title": "论反对日本帝国主义的策略"}, {"url": "012-中国革命战争的战略问题.html", "title": "中国革命战争的战略问题"}, {"url": "013-关于蒋介石声明的声明.html", "title": "关于蒋介石声明的声明"}, {"url": "014-中国共产党在抗日时期的任务.html", "title": "中国共产党在抗日时期的任务"}, {"url": "015-为争取千百万群众进入抗日民族统一战线而斗争.html", "title": "为争取千百万群众进入抗日民族统一战线而斗争"}, {"url": "016-实践论.html", "title": "实践论"}, {"url": "017-矛盾论.html", "title": "矛盾论"}, {"url": "018-反对日本进攻的方针、办法和前途.html", "title": "反对日本进攻的方针、办法和前途"}, {"url": "019-为动员一切力量争取抗战胜利而斗争.html", "title": "为动员一切力量争取抗战胜利而斗争"}, {"url": "020-反对自由主义.html", "title": "反对自由主义"}, {"url": "021-国共合作成立后的迫切任务.html", "title": "国共合作成立后的迫切任务"}, {"url": "022-和英国记者贝特兰的谈话.html", "title": "和英国记者贝特兰的谈话"}, {"url": "023-上海太原失陷以后抗日战争的形势和任务.html", "title": "上海太原失陷以后抗日战争的形势和任务"}, {"url": "024-陕甘宁边区政府第八路军后方留守处布告.html", "title": "陕甘宁边区政府第八路军后方留守处布告"}, {"url": "025-抗日游击战争的战略问题.html", "title": "抗日游击战争的战略问题"}, {"url": "026-论持久战.html", "title": "论持久战"}, {"url": "027-中国共产党在民族战争中的地位.html", "title": "中国共产党在民族战争中的地位"}, {"url": "028-统一战线中的独立自主问题.html", "title": "统一战线中的独立自主问题"}, {"url": "029-战争和战略问题.html", "title": "战争和战略问题"}, {"url": "030-五四运动.html", "title": "五四运动"}, {"url": "031-青年运动的方向.html", "title": "青年运动的方向"}, {"url": "032-反对投降活动.html", "title": "反对投降活动"}, {"url": "033-必须制裁反动派.html", "title": "必须制裁反动派"}, {"url": "034-关于国际新形势对新华日报记者的谈话.html", "title": "关于国际新形势对新华日报⑴记者的谈话"}, {"url": "035-和中央社、扫荡报、新民报三记者的谈话.html", "title": "和中央社、扫荡报、新民报⑴三记者的谈话"}, {"url": "036-苏联利益和人类利益的一致.html", "title": "苏联利益和人类利益的一致"}, {"url": "037-《共产党人》发刊词.html", "title": "《共产党人》发刊词"}, {"url": "038-目前形势和党的任务.html", "title": "目前形势和党的任务"}, {"url": "039-大量吸收知识分子.html", "title": "大量吸收知识分子"}, {"url": "040-中国革命和中国共产党.html", "title": "中国革命和中国共产党"}, {"url": "041-斯大林是中国人民的朋友.html", "title": "斯大林是中国人民的朋友"}, {"url": "042-纪念白求恩.html", "title": "纪念白求恩"}, {"url": "043-新民主主义论.html", "title": "新民主主义论"}, {"url": "044-克服投降危险，力争时局好转.html", "title": "克服投降危险，力争时局好转"}, {"url": "045-团结一切抗日力量，反对反共顽固派.html", "title": "团结一切抗日力量，反对反共顽固派"}, {"url": "046-向国民党的十点要求.html", "title": "向国民党的十点要求"}, {"url": "047-《中国工人》发刊词.html", "title": "《中国工人》发刊词"}, {"url": "048-必须强调团结和进步.html", "title": "必须强调团结和进步"}, {"url": "049-新民主主义的宪政.html", "title": "新民主主义的宪政"}, {"url": "050-抗日根据地的政权问题.html", "title": "抗日根据地的政权问题"}, {"url": "051-目前抗日统一战线中的策略问题.html", "title": "目前抗日统一战线中的策略问题"}, {"url": "052-放手发展抗日力量，抵抗反共顽固派的进攻.html", "title": "放手发展抗日力量，抵抗反共顽固派的进攻"}, {"url": "053-团结到底.html", "title": "团结到底"}, {"url": "054-论政策.html", "title": "论政策"}, {"url": "055-为皖南事变发表的命令和谈话.html", "title": "为皖南事变发表的命令和谈话"}, {"url": "056-打退第二次反共高潮后的时局.html", "title": "打退第二次反共高潮后的时局"}, {"url": "057-关于打退第二次反共高潮的总结.html", "title": "关于打退第二次反共高潮的总结"}, {"url": "058-《农村调查》的序言和跋.html", "title": "《农村调查》的序言和跋"}, {"url": "059-改造我们的学习.html", "title": "改造我们的学习"}, {"url": "060-揭破远东慕尼黑的阴谋.html", "title": "揭破远东慕尼黑的阴谋"}, {"url": "061-关于反法西斯的国际统一战线.html", "title": "关于反法西斯的国际统一战线"}, {"url": "062-在陕甘宁边区参议会的演说.html", "title": "在陕甘宁边区参议会的演说"}, {"url": "063-整顿党的作风.html", "title": "整顿党的作风"}, {"url": "064-反对党八股.html", "title": "反对党八股"}, {"url": "065-在延安文艺座谈会上的讲话.html", "title": "在延安文艺座谈会上的讲话"}, {"url": "066-一个极其重要的政策.html", "title": "一个极其重要的政策"}, {"url": "067-第二次世界大战的转折点.html", "title": "第二次世界大战的转折点"}, {"url": "068-祝十月革命二十五周年.html", "title": "祝十月革命二十五周年"}, {"url": "069-抗日时期的经济问题和财政问题.html", "title": "抗日时期的经济问题和财政问题"}, {"url": "070-关于领导方法的若干问题.html", "title": "关于领导方法的若干问题"}, {"url": "071-质问国民党.html", "title": "质问国民党"}, {"url": "072-开展根据地的减租、生产和拥政爱民运动.html", "title": "开展根据地的减租、生产和拥政爱民运动"}, {"url": "073-评国民党十一中全会和三届二次国民参政会.html", "title": "评国民党十一中全会和三届二次国民参政会"}, {"url": "074-组织起来.html", "title": "组织起来"}, {"url": "075-学习和时局.html", "title": "学习和时局"}, {"url": "076-为人民服务.html", "title": "为人民服务"}, {"url": "077-评蒋介石在双十节的演说.html", "title": "评蒋介石在双十节的演说"}, {"url": "078-文化工作中的统一战线.html", "title": "文化工作中的统一战线"}, {"url": "079-必须学会做经济工作.html", "title": "必须学会做经济工作"}, {"url": "080-游击区也能够进行生产.html", "title": "游击区也能够进行生产"}, {"url": "081-两个中国之命运.html", "title": "两个中国之命运"}, {"url": "082-论联合政府.html", "title": "论联合政府"}, {"url": "083-愚公移山.html", "title": "愚公移山"}, {"url": "084-论军队生产自给，兼论整风和生产两大运动的重要性.html", "title": "论军队生产自给，兼论整风和生产两大运动的重要性"}, {"url": "085-赫尔利和蒋介石的双簧已经破产.html", "title": "赫尔利和蒋介石的双簧已经破产"}, {"url": "086-评赫尔利政策的危险.html", "title": "评赫尔利政策的危险"}, {"url": "087-给福斯特同志的电报.html", "title": "给福斯特同志的电报"}, {"url": "088-对日寇的最后一战.html", "title": "对日寇的最后一战"}, {"url": "089-抗日战争胜利后的时局和我们的方针.html", "title": "抗日战争胜利后的时局和我们的方针"}, {"url": "090-蒋介石在挑动内战.html", "title": "蒋介石在挑动内战"}, {"url": "091-第十八集团军总司令给蒋介石的两个电报.html", "title": "第十八集团军总司令给蒋介石的两个电报"}, {"url": "092-评蒋介石发言人谈话.html", "title": "评蒋介石发言人谈话"}, {"url": "093-中共中央关于同国民党进行和平谈判的通知.html", "title": "中共中央关于同国民党进行和平谈判的通知"}, {"url": "094-关于重庆谈判.html", "title": "关于重庆谈判"}, {"url": "095-国民党进攻的真相.html", "title": "国民党进攻的真相"}, {"url": "096-减租和生产是保卫解放区的两件大事.html", "title": "减租和生产是保卫解放区的两件大事"}, {"url": "097-一九四六年解放区工作的方针.html", "title": "一九四六年解放区工作的方针"}, {"url": "098-建立巩固的东北根据地.html", "title": "建立巩固的东北根据地"}, {"url": "099-关于目前国际形势的几点估计.html", "title": "关于目前国际形势的几点估计"}, {"url": "100-以自卫战争粉碎蒋介石的进攻.html", "title": "以自卫战争粉碎蒋介石的进攻"}, {"url": "101-和美国记者安娜·路易斯·斯特朗的谈话.html", "title": "和美国记者安娜·路易斯·斯特朗⑴的谈话"}, {"url": "102-集中优势兵力，各个歼灭敌人.html", "title": "集中优势兵力，各个歼灭敌人"}, {"url": "103-美国“调解”真相和中国内战前途.html", "title": "美国“调解”真相和中国内战前途"}, {"url": "104-三个月总结.html", "title": "三个月总结"}, {"url": "105-迎接中国革命的新高潮.html", "title": "迎接中国革命的新高潮"}, {"url": "106-中共中央关于暂时放弃延安和保卫陕甘宁边区的两个文件.html", "title": "中共中央关于暂时放弃延安和保卫陕甘宁边区的两个文件"}, {"url": "107-关于西北战场的作战方针.html", "title": "关于西北战场的作战方针"}, {"url": "108-蒋介石政府已处在全民的包围中.html", "title": "蒋介石政府已处在全民的包围中"}, {"url": "109-解放战争第二年的战略方针.html", "title": "解放战争第二年的战略方针"}, {"url": "110-中国人民解放军宣言.html", "title": "中国人民解放军宣言"}, {"url": "111-中国人民解放军总部关于重行颁布三大纪律八项注意的训令.html", "title": "中国人民解放军总部关于重行颁布三大纪律八项注意的训令"}, {"url": "112-目前形势和我们的任务.html", "title": "目前形势和我们的任务"}, {"url": "113-关于建立报告制度.html", "title": "关于建立报告制度"}, {"url": "114-关于目前党的政策中的几个重要问题.html", "title": "关于目前党的政策中的几个重要问题"}, {"url": "115-军队内部的民主运动.html", "title": "军队内部的民主运动"}, {"url": "116-在不同地区实施土地法的不同策略.html", "title": "在不同地区实施土地法的不同策略"}, {"url": "117-纠正土地改革宣传中的“左”倾错误.html", "title": "纠正土地改革宣传中的“左”倾错误"}, {"url": "118-新解放区土地改革要点.html", "title": "新解放区土地改革要点"}, {"url": "119-关于工商业政策.html", "title": "关于工商业政策"}, {"url": "120-关于民族资产阶级和开明绅士问题.html", "title": "关于民族资产阶级和开明绅士问题"}, {"url": "121-评西北大捷兼论解放军的新式整军运动.html", "title": "评西北大捷兼论解放军的新式整军运动"}, {"url": "122-关于情况的通报.html", "title": "关于情况的通报"}, {"url": "123-在晋绥干部会议上的讲话.html", "title": "在晋绥干部会议上的讲话"}, {"url": "124-对晋绥日报编辑人员的谈话.html", "title": "对晋绥日报编辑人员的谈话"}, {"url": "125-再克洛阳后给洛阳前线指挥部的电报.html", "title": "再克洛阳后给洛阳前线指挥部的电报"}, {"url": "126-新解放区农村工作的策略问题.html", "title": "新解放区农村工作的策略问题"}, {"url": "127-一九四八年的土地改革工作和整党工作.html", "title": "一九四八年的土地改革工作和整党工作"}, {"url": "128-关于辽沈战役的作战方针.html", "title": "关于辽沈战役⑴的作战方针"}, {"url": "129-关于健全党委制.html", "title": "关于健全党委制"}, {"url": "130-中共中央关于九月会议的通知.html", "title": "中共中央关于九月会议的通知"}, {"url": "131-关于淮海战役的的作战方针.html", "title": "关于淮海战役的的作战方针"}, {"url": "132-全世界革命力量团结起来，反对帝国主义的侵略.html", "title": "全世界革命力量团结起来，反对帝国主义的侵略"}, {"url": "133-中国军事形势的重大变化.html", "title": "中国军事形势的重大变化"}, {"url": "134-关于平津战役的作战方针.html", "title": "关于平津战役⑴的作战方针"}, {"url": "135-敦促杜聿明等投降书.html", "title": "敦促杜聿明等投降书"}, {"url": "136-将革命进行到底.html", "title": "将革命进行到底"}, {"url": "137-评战犯求和.html", "title": "评战犯求和"}, {"url": "138-中共中央毛泽东主席关于时局的声明.html", "title": "中共中央毛泽东主席关于时局的声明"}, {"url": "139-中共发言人评南京行政院的决议.html", "title": "中共发言人评南京行政院的决议"}, {"url": "140-中共发言人关于命令国民党反动政府重新逮捕前日本侵华军总司令冈村宁次和逮捕国民党内战罪犯的谈话.html", "title": "中共发言人关于命令国民党反动政府重新逮捕前日本侵华军总司令冈村宁次和逮捕国民党内战罪犯的谈话"}, {"url": "141-中共发言人关于和平条件必须包括惩办日本战犯和国民党战犯的声明.html", "title": "中共发言人关于和平条件必须包括惩办日本战犯和国民党战犯的声明"}, {"url": "142-把军队变为工作队.html", "title": "把军队变为工作队"}, {"url": "143-四分五裂的反动派为什么还要空喊“全面和平”？.html", "title": "四分五裂的反动派为什么还要空喊“全面和平”？"}, {"url": "144-国民党反动派由“呼吁和平”变为呼吁战争.html", "title": "国民党反动派由“呼吁和平”变为呼吁战争"}, {"url": "145-评国民党对战争责任问题的几种答案.html", "title": "评国民党对战争责任问题的几种答案"}, {"url": "146-在中国共产党第七届中央委员会第二次全体会议上的报告.html", "title": "在中国共产党第七届中央委员会第二次全体会议上的报告"}, {"url": "147-党委会的工作方法.html", "title": "党委会的工作方法"}, {"url": "148-南京政府向何处去？.html", "title": "南京政府向何处去？"}, {"url": "149-向全国进军的命令.html", "title": "向全国进军的命令"}, {"url": "150-中国人民解放军布告.html", "title": "中国人民解放军布告"}, {"url": "151-中国人民解放军总部发言人为英国军舰暴行发表的声明.html", "title": "中国人民解放军总部发言人为英国军舰暴行⑴发表的声明"}, {"url": "152-在新政治协商会议筹备会上的讲话.html", "title": "在新政治协商会议筹备会上的讲话"}, {"url": "153-论人民民主专政--纪念中国共产党二十八周年.html", "title": "论人民民主专政--纪念中国共产党二十八周年"}, {"url": "154-丢掉幻想，准备斗争.html", "title": "丢掉幻想，准备斗争"}, {"url": "155-别了，司徒雷登.html", "title": "别了，司徒雷登"}, {"url": "156-“友谊”，还是侵略？.html", "title": "“友谊”，还是侵略？"}, {"url": "157-为什么要讨论白皮书？.html", "title": "为什么要讨论白皮书？"}, {"url": "158-唯心历史观的破产.html", "title": "唯心历史观的破产"}, {"url": "159-中国人民站起来了.html", "title": "中国人民站起来了"}, {"url": "160-中国人民大团结万岁.html", "title": "中国人民大团结万岁"}, {"url": "161-人民英雄们永垂不朽.html", "title": "人民英雄们永垂不朽"}, {"url": "162-永远保持艰苦奋斗的作风.html", "title": "永远保持艰苦奋斗的作风"}, {"url": "163-征询对待富农策略问题的意见.html", "title": "征询对待富农策略问题的意见"}, {"url": "164-为争取国家财政经济状况的基本好转而斗争.html", "title": "为争取国家财政经济状况的基本好转而斗争"}, {"url": "165-不要四面出击.html", "title": "不要四面出击"}, {"url": "166-做一个完全的革命派.html", "title": "做一个完全的革命派"}, {"url": "167-你们是全民族的模范人物.html", "title": "你们是全民族的模范人物"}, {"url": "168-给中国人民志愿军的命令.html", "title": "给中国人民志愿军的命令"}, {"url": "169-中国人民志愿军要爱护朝鲜的一山一水一草一木.html", "title": "中国人民志愿军要爱护朝鲜的一山一水一草一木"}, {"url": "170-中共中央政治局扩大会议决议要点.html", "title": "中共中央政治局扩大会议决议要点"}, {"url": "171-镇压反革命必须实行党的群众路线.html", "title": "镇压反革命必须实行党的群众路线"}, {"url": "172-镇压反革命必须打得稳，打得准，打得狠.html", "title": "镇压反革命必须打得稳，打得准，打得狠"}, {"url": "173-应当重视电影《武训传》的讨论.html", "title": "应当重视电影《武训传》的讨论"}, {"url": "174-三大运动的伟大胜利.html", "title": "三大运动的伟大胜利"}, {"url": "175-关于“三反”、“五反”的斗争.html", "title": "关于“三反”、“五反”的斗争"}, {"url": "176-把农业互助合作当作一件大事去做.html", "title": "把农业互助合作当作一件大事去做"}, {"url": "177-元旦祝词.html", "title": "元旦祝词"}, {"url": "178-中共中央关于西藏工作方针的指示.html", "title": "中共中央关于西藏工作方针的指示"}, {"url": "179-工人阶级与资产阶级的矛盾是国内的主要矛盾.html", "title": "工人阶级与资产阶级的矛盾是国内的主要矛盾"}, {"url": "180-团结起来，划清敌我界限.html", "title": "团结起来，划清敌我界限"}, {"url": "181-祝贺中国人民志愿军的重大胜利.html", "title": "祝贺中国人民志愿军的重大胜利"}, {"url": "182-反对官僚主义、命令主义和违法乱纪.html", "title": "反对官僚主义、命令主义和违法乱纪"}, {"url": "183-批判大汉族主义.html", "title": "批判大汉族主义"}, {"url": "184-解决“五多”问题.html", "title": "解决“五多”问题"}, {"url": "185-对刘少奇、杨尚昆破坏纪律擅自以中央名义发出文件的批评.html", "title": "对刘少奇、杨尚昆破坏纪律擅自以中央名义发出文件的批评"}, {"url": "186-批判离开总路线的右倾观点.html", "title": "批判离开总路线的右倾观点"}, {"url": "187-青年团的工作要照顾青年的特点.html", "title": "青年团的工作要照顾青年的特点"}, {"url": "188-关于国家资本主义.html", "title": "关于国家资本主义"}, {"url": "189-党在过渡时期的总路线.html", "title": "党在过渡时期的总路线"}, {"url": "190-反对党内的资产阶级思想.html", "title": "反对党内的资产阶级思想"}, {"url": "191-改造资本主义工商业的必经之路.html", "title": "改造资本主义工商业的必经之路"}, {"url": "192-抗美援朝的伟大胜利和今后的任务.html", "title": "抗美援朝的伟大胜利和今后的任务"}, {"url": "193-批判梁漱溟的反动思想.html", "title": "批判梁漱溟的反动思想"}, {"url": "194-关于农业互助合作的两次谈话.html", "title": "关于农业互助合作的两次谈话"}, {"url": "195-关于中华人民共和国宪法草案.html", "title": "关于中华人民共和国宪法草案"}, {"url": "196-为建设一个伟大的社会主义国家而奋斗.html", "title": "为建设一个伟大的社会主义国家而奋斗"}, {"url": "197-关于《红楼梦》研究问题的信.html", "title": "关于《红楼梦》研究问题的信"}, {"url": "198-原子弹吓不倒中国人民.html", "title": "原子弹吓不倒中国人民"}, {"url": "199-在中国共产党全国代表会议上的讲话.html", "title": "在中国共产党全国代表会议上的讲话"}, {"url": "200-驳“舆论一律”.html", "title": "驳“舆论一律”"}, {"url": "201-《关于胡风反革命集团的材料》的序言和按语.html", "title": "《关于胡风反革命集团的材料》的序言和按语"}, {"url": "202-关于农业合作化问题.html", "title": "关于农业合作化问题"}, {"url": "203-农业合作化必须依靠党团员和贫农下中农.html", "title": "农业合作化必须依靠党团员和贫农下中农"}, {"url": "204-农业合作化的一场辩论和当前的阶级斗争.html", "title": "农业合作化的一场辩论和当前的阶级斗争"}, {"url": "205-《中国农村的社会主义高潮》的序言.html", "title": "《中国农村的社会主义高潮》的序言"}, {"url": "206-《中国农村的社会主义高潮》的按语.html", "title": "《中国农村的社会主义高潮》的按语"}, {"url": "207-征询对农业十七条的意见.html", "title": "征询对农业十七条的意见"}, {"url": "208-加快手工业的社会主义改造.html", "title": "加快手工业的社会主义改造"}, {"url": "209-论十大关系.html", "title": "论十大关系"}, {"url": "210-美帝国主义是纸老虎.html", "title": "美帝国主义是纸老虎"}, {"url": "211-增强党的团结，继承党的传统.html", "title": "增强党的团结，继承党的传统"}, {"url": "212-我们党的—些历史经验.html", "title": "我们党的—些历史经验"}, {"url": "213-纪念孙中山先生.html", "title": "纪念孙中山先生"}, {"url": "214-在中国共产党第八届中央委员会第二次全体会议上的讲话.html", "title": "在中国共产党第八届中央委员会第二次全体会议上的讲话"}, {"url": "215-在省市自治区党委书记会议上的讲话.html", "title": "在省市自治区党委书记会议上的讲话"}, {"url": "216-关于正确处理人民内部矛盾的问题.html", "title": "关于正确处理人民内部矛盾的问题"}, {"url": "217-在中国共产党全国宣传工作会议上的讲话.html", "title": "在中国共产党全国宣传工作会议上的讲话"}, {"url": "218-坚持艰苦奋斗，密切联系群众.html", "title": "坚持艰苦奋斗，密切联系群众"}, {"url": "219-事情正在起变化.html", "title": "事情正在起变化"}, {"url": "220-中国共产党是全中国人民的领导核心.html", "title": "中国共产党是全中国人民的领导核心"}, {"url": "221-组织力量反击右派分子的猖狂进攻.html", "title": "组织力量反击右派分子的猖狂进攻"}, {"url": "222-文汇报的资产阶级方向应当批判.html", "title": "文汇报的资产阶级方向应当批判"}, {"url": "223-打退资产阶级右派的进攻.html", "title": "打退资产阶级右派的进攻"}, {"url": "224-一九五七年夏季的形势.html", "title": "一九五七年夏季的形势"}, {"url": "225-做革命的促进派.html", "title": "做革命的促进派"}, {"url": "226-坚定地相信群众的大多数.html", "title": "坚定地相信群众的大多数"}, {"url": "227-党内团结的辩证方法.html", "title": "党内团结的辩证方法"}, {"url": "228-一切反动派都是纸老虎.html", "title": "一切反动派都是纸老虎"}, {"url": "SUMMARY.html", "title": "SUMMARY"}, {"url": "目录.html", "title": "第一卷 国内革命战争时期"}]}];
+
+const THEME_DATA = {"blue": {"name": "天空蓝", "icon": "🔵"}, "green": {"name": "护眼绿", "icon": "🟢"}, "orange": {"name": "暖橙", "icon": "🟠"}, "purple": {"name": "深紫", "icon": "🟣"}, "rose": {"name": "玫瑰红", "icon": "🔴"}, "gray": {"name": "经典灰", "icon": "⚫"}};
+const THEME_KEYS = ["blue", "green", "orange", "purple", "rose", "gray"];
+
+// ---- 安全存储（兼容 file://、隐私模式等限制 localStorage 的环境） ----
+const safeStorage = (function() {
+  const mem = {};
+  let useLocal = false;
+  try {
+    localStorage.setItem('__test__', '1');
+    localStorage.removeItem('__test__');
+    useLocal = true;
+  } catch(e) {}
+  return {
+    get(k) {
+      try { return useLocal ? localStorage.getItem(k) : (mem[k] || null); }
+      catch(e) { return mem[k] || null; }
+    },
+    set(k, v) {
+      try { if (useLocal) localStorage.setItem(k, v); else mem[k] = v; }
+      catch(e) { mem[k] = v; }
+    }
+  };
+})();
+
+// ---- 主题管理 ----
+let _currentTheme = 'blue';
+let _currentDark = false;
+
+function getStoredTheme() {
+  const t = safeStorage.get('book-theme') || 'blue';
+  const d = safeStorage.get('book-dark') === 'true';
+  return { theme: t, dark: d };
+}
+
+function applyTheme(themeKey, dark) {
+  _currentTheme = themeKey;
+  _currentDark = dark;
+  const attr = dark ? themeKey + '-dark' : themeKey;
+  document.documentElement.setAttribute('data-theme', attr);
+  safeStorage.set('book-theme', themeKey);
+  safeStorage.set('book-dark', dark ? 'true' : 'false');
+  updateThemeUI(themeKey, dark);
+}
+
+function updateThemeUI(themeKey, dark) {
+  document.querySelectorAll('.theme-dot').forEach(dot => {
+    dot.classList.toggle('active', dot.dataset.theme === themeKey);
+  });
+  const dtBtn = document.querySelector('.dark-toggle');
+  if (dtBtn) dtBtn.textContent = dark ? '☀️ 亮色' : '🌙 暗色';
+}
+
+function cycleTheme(themeKey) {
+  applyTheme(themeKey, _currentDark);
+}
+
+function toggleDark() {
+  applyTheme(_currentTheme, !_currentDark);
+}
+
+// 初始化主题（立即执行）
+(function() {
+  try {
+    const { theme, dark } = getStoredTheme();
+    applyTheme(theme, dark);
+  } catch(e) {
+    applyTheme('blue', false);
+  }
+})();
+
+// ---- 渲染侧边栏 ----
+function renderNav() {
+  const nav = document.getElementById('sidebarNav');
+  if (!nav) return;
+  const current = decodeURIComponent(window.location.pathname.split('/').pop()) || 'index.html';
+  let html = '';
+  NAV_DATA.forEach(group => {
+    html += '<div class="nav-group">';
+    if (NAV_DATA.length > 1) {
+      html += '<div class="nav-group-title">' + group.title + '</div>';
+    }
+    group.sections.forEach(s => {
+      const sUrl = decodeURIComponent(s.url);
+      const active = sUrl === current ? ' active' : '';
+      html += '<a href="' + s.url + '" class="nav-link' + active + '">' + s.title + '</a>';
+    });
+    html += '</div>';
+  });
+  nav.innerHTML = html;
+}
+
+function renderThemePanel() {
+  const panel = document.getElementById('themePanel');
+  if (!panel) return;
+  panel.innerHTML = '';
+
+  // 创建主题按钮（用 addEventListener 绑定事件，避免 inline onclick 被 CSP 阻止）
+  THEME_KEYS.forEach(function(key) {
+    const t = THEME_DATA[key];
+    const btn = document.createElement('button');
+    btn.className = 'theme-dot' + (key === _currentTheme ? ' active' : '');
+    btn.setAttribute('data-theme', key);
+    btn.setAttribute('title', t.name);
+    btn.textContent = t.icon;
+
+    const tooltip = document.createElement('span');
+    tooltip.className = 'tooltip';
+    tooltip.textContent = t.name;
+    btn.insertBefore(tooltip, btn.firstChild);
+
+    btn.addEventListener('click', function() { cycleTheme(key); });
+    panel.appendChild(btn);
+  });
+
+  // 创建亮/暗切换按钮
+  const darkBtn = document.createElement('button');
+  darkBtn.className = 'dark-toggle';
+  darkBtn.textContent = _currentDark ? '☀️ 亮色' : '🌙 暗色';
+  darkBtn.addEventListener('click', toggleDark);
+  panel.appendChild(darkBtn);
+}
+
+// ---- 侧边栏开关 ----
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('open');
+}
+
+// ---- 阅读进度条 ----
+function updateProgress() {
+  const bar = document.querySelector('.progress-bar');
+  if (!bar) return;
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+  bar.style.transform = 'scaleX(' + progress + ')';
+}
+
+// ---- 回到顶部 ----
+function initBackToTop() {
+  const btn = document.createElement('button');
+  btn.className = 'back-to-top';
+  btn.textContent = '↑';
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  document.body.appendChild(btn);
+  window.addEventListener('scroll', function() {
+    btn.classList.toggle('visible', (window.scrollY || document.documentElement.scrollTop) > 400);
+    updateProgress();
+  }, { passive: true });
+}
+
+// ---- 键盘翻页 ----
+function initKeyNav() {
+  document.addEventListener('keydown', function(e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'ArrowLeft') {
+      const prev = document.querySelector('.nav-btn.prev');
+      if (prev && prev.href) window.location.href = prev.href;
+    }
+    if (e.key === 'ArrowRight') {
+      const next = document.querySelector('.nav-btn.next');
+      if (next && next.href) window.location.href = next.href;
+    }
+  });
+}
+
+// ---- 启动所有模块 ----
+renderNav();
+renderThemePanel();
+initBackToTop();
+initKeyNav();
+
+</script>
+</body>
+</html>
